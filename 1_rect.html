@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. D3 practice</title>
+</head>
+
+<body>
+    <svg id='char'></svg>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // 建立資料
+        const data = [{
+                month: '一月',
+                count: 50,
+            },
+            {
+                month: '二月',
+                count: 30,
+            },
+            {
+                month: '三月',
+                count: 70,
+            },
+            {
+                month: '四月',
+                count: 100,
+            },
+            {
+                month: '五月',
+                count: 60,
+            },
+        ];
+
+
+        // 頁面初始化
+        window.addEventListener('DOMContentLoaded', () => {
+            const svgChar = d3.select('#char');
+            let margin = {
+                top: 50,
+                left: 100,
+                bottom: 0,
+                right: 0,
+            };
+
+            let width = window.innerHeight - margin.left;
+            let height = window.innerHeight;
+
+            // 設定svg大小
+            svgChar.attr('width', width).attr('height', height);
+
+            // 設定x軸範圍 : 對應值域 range([]) => domain([])
+            let x = d3.scaleBand()
+                .domain(data.map((d) => d.month))
+                .range([margin.left, width - margin.left])
+                .padding(0.2);
+
+            // 設定y軸範圍 
+            let y = d3.scaleLinear()
+                .domain([0, d3.max(data, (d) => d.count)])
+                .range([height * 0.8, 0]);
+            // console.log(y(20))
+
+            // 設定xy軸放置位置
+            let xAxis = d3.axisBottom(x).tickSizeOuter(0);
+            let yAxis = d3.axisLeft(y);
+
+            // 畫出x軸
+            svgChar.append('g')
+                .attr('class', 'xAxis')
+                .attr('transform', `translate(0,${y(0) + margin.top})`)
+                .call(xAxis);
+
+            // 畫出y軸
+            svgChar.append('g')
+                .attr('class', 'yAxis')
+                .attr('transform', `translate(${margin.left},${margin.top})`)
+                .call(yAxis);
+
+            // 設定長條圖表每列的XY點
+            // const xAccessor = d => d.month
+            // const yAccessor = d => d.count
+
+            // 畫出長條圖
+            svgChar.append('g')
+                .selectAll('rect')
+                .data(data)
+                .join('rect')
+                .attr('fill', 'red')
+                // 設定在xy軸上的位置
+                .attr('x', (d) => {
+                    // console.log(x(xAccessor(d)))
+                    // console.log(x(d.month))
+                    return x(d.month)
+                })
+                .attr('y', (d) => {
+                    // console.log(y(d.count))
+                    return y(d.count) + margin.top
+                    // return y(yAccessor(d)) + margin.top
+                })
+                .attr('width', x.bandwidth())
+                .attr('height', (d) => y(0) - y(d.count))
+
+        });
+    </script>
+</body>
+
+</html>
