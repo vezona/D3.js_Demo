@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range</title>
+    <style>
+        svg {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // svg
+        const svg = d3.select('.container').append('svg');
+        svg.attr('width', 500)
+            .attr('height', 500);
+
+        // 輸入與輸出比例換算範例
+        const xScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range([0, 10])
+        console.log(xScale(100)); // 10，換算輸出比例完成
+
+        // 陣列data
+        // const svgWidth = 500 //圖表寬度
+        // const data2 = [3, 5, 12, 20]
+        // const xScale = d3.scaleLinear()
+        //     .domain([d3.min(data2), d3.max(data2)]) // [3,20]
+        //     // .domain(d3.extent(data2)) // extent()會 return 陣列，內含最小與最大值
+        //     .range([0, svgWidth]) // [0,500]
+        // console.log(xScale(d3.max(data2))) // 500，完成data資料與圖表範圍比例換算
+
+        // //data
+        // const data = [{
+        //     x: 100,
+        //     y: 30,
+        // }, {
+        //     x: 180,
+        //     y: 30,
+        // }, {
+        //     x: 250,
+        //     y: 30,
+        // }];
+
+        // // map 資料集
+        // xData = data.map(i => i.x);
+        // console.log(xData) // [100, 180, 250]
+        // const xScale = d3.scaleLinear()
+        //     .domain([0, d3.max(xData)]) // [0, 250]
+        //     .range([0, 10])
+        // console.log(xScale(250)); // 10
+
+        // // ScaleBand 
+        // const data2 = ['狗', '貓', '大象', '老虎']
+        // const xScale = d3.scaleBand()
+        //     .domain(data2) // 直接帶入整個陣列
+        //     .range([0, 100]) // 按照帶入陣列長度去換算range占比
+        // console.log(xScale('貓')) // 25，完成data資料與圖表範圍比例換算
+    </script>
+</body>
+
+</html>

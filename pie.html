@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie</title>
+    <style>
+        svg {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // data 
+        const data = [{
+                name: '金金',
+                votes: 7,
+            },
+            {
+                name: 'Norah',
+                votes: 12,
+            },
+            {
+                name: 'Jim',
+                votes: 9,
+            },
+            {
+                name: 'Kuro',
+                votes: 25,
+            },
+            {
+                name: '冠毅',
+                votes: 22,
+            },
+            {
+                name: 'Rei',
+                votes: 31,
+            }, ,
+            {
+                name: 'winnie',
+                votes: 17,
+            }
+        ];
+
+        // svg
+        const svg = d3.select('.container').append('svg');
+        svg.attr('width', 500)
+            .attr('height', 500);
+
+        // pie
+        let pie = d3.pie().value(d => d.votes).padAngle(0.025)(data) //建立layout實例並設定其內容
+        let arcGenr = d3.arc().innerRadius(50).outerRadius(150).cornerRadius(10) //建立產生器
+        let scC = d3.scaleOrdinal(d3.schemePastel2) //建立scale物件，schemePastel2繪製顏色
+            .domain(pie.map(d => d.index)) //Ordinal scale 會用字串查找物件
+
+        svg.append('g').attr('transform', 'translate(300,175)') //建立g並移動到定點，準備建立圓形
+        svg.selectAll('path').data(pie).enter().append('path') //建立pie圖形路徑
+            .attr('d', arcGenr) //將產生器生成的d帶入
+            .attr('fill', d => scC(d.index)) //將pie的區塊與顏色帶入
+            .attr('stroke', 'grey');
+    </script>
+</body>
+
+</html>

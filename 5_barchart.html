@@ -58,6 +58,7 @@
                 .domain(data.map((d) => d.month))
                 .range([margin.left, width - margin.left])
                 .padding(0.2);
+            console.log(data.map((d) => d.month))
 
             // 設定y軸範圍 
             let y = d3.scaleLinear()

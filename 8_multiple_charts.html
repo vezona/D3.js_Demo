@@ -12,8 +12,6 @@
         outline: 1px solid green;
     } */
 
-
-
         html {
             font-size: 13px;
             font-family: Arial, Helvetica, sans-serif;
@@ -25,7 +23,7 @@
 
         #wrapper {
             margin: auto;
-            display: flex;
+            /* display: flex; */
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
@@ -46,11 +44,12 @@
         }
 
         .chartContainer {
-            box-sizing: border-box;
+            /* box-sizing: border-box;
             padding-top: 2rem;
             outline: 1px solid green;
-            flex-grow: 1;
-            width: 50%;
+            flex-grow: 1; */
+            margin: auto;
+            width: 80%;
             min-width: 300px;
             height: 500px;
         }
@@ -121,18 +120,18 @@
         .y1Axis .tick line {
             stroke: #e8e8e8;
         }
+
+        /* 監聽方塊透明 */
+        .listening-rect {
+            fill: transparent;
+        }
     </style>
 
 </head>
 
 <body>
     <div id="wrapper">
-        <div class="houseInfo">
-            <div>這邊要放租屋的tab資訊</div>
-        </div>
-
         <div class="chartContainer">
-
         </div>
     </div>
 
@@ -185,7 +184,8 @@
         // 先非同步取資料
         async function getData() {
             dataGet = await d3.json(dataURL);
-            data = dataGet.list.slice(0, 6).reverse() //只取近半年資料
+            // data = dataGet.list.reverse()
+            data = dataGet.list.slice(0, 8).reverse() //只取近半年資料
 
             // 取第二筆資料
             // dataGet2 = await d3.json(dataURL2);
@@ -406,6 +406,25 @@
             const y2Accessor = (d) => d.dealCount
             const y3Accessor = (d) => d.nearByPinPrice
 
+            // 先畫長條圖，折線圖才不會被蓋住
+            const barChart = svg.append('g')
+                .selectAll('rect')
+                .data(data)
+                .join('rect')
+                .attr('x', (d, i) => {
+                    // console.log(parseInt(d.Date.slice(4)))
+                    // console.log(xAccessor(d))
+                    // console.log(xScale(xAccessor(d)))
+                    return xScale(xAccessor(d))
+                })
+                .attr('y', (d, i) => {
+                    // console.log(d)
+                    return y2Scale(y2Accessor(d)) - marginBottom
+                })
+                .attr('width', xScale.bandwidth())
+                .attr('height', (d) => y2Scale(0) - y2Scale(y2Accessor(d)))
+                .attr('fill', '#e0e0e0')
+
             // 繪製Y軸第一條折線圖
             const lineChart = d3.line()
                 .x((d) => xScale(xAccessor(d)) + marginLeft / 4)
@@ -480,7 +499,7 @@
                 .style("stroke-dasharray", "4,4");
 
             // 第二條折線圖圓點
-            svg.selectAll('.dot2')
+            const dots2 = svg.selectAll('.dot2')
                 .data(filteredData2)
                 .enter()
                 .append('g')
@@ -492,24 +511,52 @@
                 .attr('fill', '#78c9b7')
                 .attr("stroke", "#78c9b7")
 
-            // 長條圖
-            const barChart = svg.append('g')
-                .selectAll('rect')
-                .data(data)
-                .join('rect')
-                .attr('x', (d, i) => {
-                    // console.log(parseInt(d.Date.slice(4)))
-                    // console.log(xAccessor(d))
-                    // console.log(xScale(xAccessor(d)))
-                    return xScale(xAccessor(d))
+            // 滑鼠事件
+
+            // // 加上hover時的垂直軸
+            // const xHoverAxisLine = svg
+            //     .append("g")
+            //     .append("rect")
+            //     .attr("class", "dotted")
+            //     .attr("stroke-width", "1px")
+            //     .attr("width", ".5px")
+            //     .attr("height", svgheight);
+
+            let tooltip = d3.select('.chartContainer')
+                .append('div').text("text!!")
+                .style('position', 'absolute')
+                .style("opacity", 0)
+                .attr("class", "tooltip")
+                .style("background-color", "white")
+                .style("border", "solid")
+                .style("border-width", "1px")
+                .style("border-color", "grey")
+                .style("padding", "5px")
+
+            dots2.on('mouseover', function () {
+                    const mousePosition = d3.pointer(event, this);
+                    const hoveredDate = y1LineScale.invert(mousePosition[1]);
+                    // 原點放大變色
+                    d3.select(this).attr('cursor', 'pointer')
+                        .attr('r', 7).style('fill', 'white').style('stroke-width', 5)
+
+                    // tooltip框
+                    const dotX = parseInt(d3.select(this).attr('cx')) + marginLeft + 15
+                    const dotY = parseInt(d3.select(this).attr('cy')) + marginBottom - 15
+                    tooltip.html(`每坪單價<br><span style="color:#d02b41">${parseInt(hoveredDate)}</span> 萬元`)
+                        .style('opacity', 1)
+                        .style('left', `${dotX}px`)
+                        .style('top', `${dotY}px`)
+
+                    // 軸線
+                    // const xline = mousePosition[0]
+                    // console.log(parseInt(hoveredDate))
+                    // xHoverAxisLine.attr('x', xline)
                 })
-                .attr('y', (d, i) => {
-                    // console.log(d)
-                    return y2Scale(y2Accessor(d)) - marginBottom
+                .on('mouseleave', function () {
+                    d3.select(this).attr('r', 5).style('fill', '#78c9b7').style('stroke-width', 1)
+                    tooltip.style("opacity", 0)
                 })
-                .attr('width', xScale.bandwidth())
-                .attr('height', (d) => y2Scale(0) - y2Scale(y2Accessor(d)))
-                .attr('fill', '#e0e0e0')
 
             // 最後再渲染圖表標籤
             renderChartLabel()

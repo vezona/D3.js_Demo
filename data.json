@@ -17,7 +17,7 @@
             "date": "110-3",
             "pinPrice": 0.0000,
             "dealCount": 0,
-            "nearByPinPrice": 98.4347
+            "nearByPinPrice": 0
         },
         {
             "date": "110-2",
@@ -27,7 +27,7 @@
         },
         {
             "date": "110-1",
-            "pinPrice": 56.7900,
+            "pinPrice": 0,
             "dealCount": 2,
             "nearByPinPrice": 103.5544
         },
@@ -53,7 +53,7 @@
             "date": "109-9",
             "pinPrice": 54.7029,
             "dealCount": 7,
-            "nearByPinPrice": 93.5570
+            "nearByPinPrice": 0
         },
         {
             "date": "109-8",

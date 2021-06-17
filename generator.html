@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator</title>
+    <style>
+        svg {
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // data 
+        const data = [{
+                x: 100,
+                y: 30,
+                value: 'A'
+            },
+            {
+                x: 180,
+                y: 50,
+                value: 'B'
+            },
+            {
+                x: 250,
+                y: 30,
+                value: 'A'
+            },
+        ];
+
+        // svg
+        const svg = d3.select('.container').append('svg');
+        svg.attr('width', 500)
+            .attr('height', 500);
+
+        // symbol
+        let symbol = d3.symbol() //使用符號產生器
+            .size(100) //定義符號大小
+            .type(d3.symbolStar) //決定哪種符號
+
+        svg.append('g') //g將星星作為一個組合
+            .selectAll('path')
+            .data(data)
+            .enter() // 綁定資料
+            .append('path') //為每個元素建立新的path元素
+            .attr('d', symbol) //上方定義的符號產生器把d屬性填入建立的path
+            .attr('fill', 'blue')
+            .attr('transform', d => `translate(${d.x},${d.y})`); //資料中的x
+
+        // Line
+        let data2 = [
+            [1, 1],
+            [2, 2],
+            [3, 2],
+            [4, 2],
+            [5, 2],
+            [6, 2]
+        ]
+
+        let xScale = d3.scaleLinear().domain([0, 10]).range([0, 500]),
+            yScale = d3.scaleLinear().domain([0, 10]).range([200, 0]),
+            dataSet = data2.map(d => [xScale(d[0]), yScale(d[1])])
+
+        // 畫點點
+        svg.append('g').selectAll('circle')
+            .data(dataSet).enter().append('circle')
+            .attr('r', 3)
+            .attr('cx', d => d[0])
+            .attr('cy', d => d[1])
+
+        // 畫線
+        // let lineGenerator = d3.line() //generator function
+        // svg.append('g')
+        //     .append('path')
+        //     .attr('d', lineGenerator(dataSet))
+        //     .attr('fill', 'none').attr('stroke', 'red');
+
+        // defined
+        let lineGenerator = d3.line().defined((d, i) => i == 2 ? undefined : true); //index2不畫線
+        svg.append('g')
+            .append('path')
+            .attr('d', lineGenerator(dataSet))
+            .attr('fill', 'none').attr('stroke', 'red');
+    </script>
+</body>
+
+</html>
