@@ -1,90 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1. SVG 設定</title>
     <style>
-        .container,
-        .container2 {
-            max-width: 980px;
-            margin: 30px auto;
-        }
-
-        svg {
-            outline: 1px solid red;
-        }
+      svg {
+        outline: 1px solid red;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="container"></div>
-    <div class="container2">
-        <svg>
-            <circle></circle>
-            <circle></circle>
-        </svg>
+  <body>
+    <div class="container">
+      <svg width="500" height="500">
+          <line x1="10" x2="300" y1="50" y2="50" 
+          stroke="black" stroke-width="5">
+      </svg>
     </div>
 
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script>
-        const data = [{
-                x: 100,
-                y: 30
-            },
-            {
-                x: 180,
-                y: 30
-            },
-            {
-                x: 250,
-                y: 30
-            },
-        ];
-        const svg = d3.select('.container').append('svg');
-        svg.attr('width', 500)
-            .attr('height', 500);
-
-        // 加入資料
-        let dots = svg.selectAll('circle')
-            .data(data)
-
-        console.log(dots)
-
-        let dots2 = d3.select('.container2').select('svg')
-        aa = dots2.selectAll('circle')
-            .data(data)
-            .attr('r', 10)
-            .attr('fill', 'red')
-            .attr('cx', d => d.x)
-            .attr('cy', (d) => d.y)
-            .enter()
-            .append('circle')
-            .attr('r', 10)
-            .attr('fill', 'red')
-            .attr('cx', d => d.x)
-            .attr('cy', (d) => d.y)
-        console.log(aa)
-
-        // .enter()
-        // .append('circle')
-        // .attr('r', 10)
-        // .attr('fill', 'red')
-        // .attr('cx', d => d.x)
-        // .attr('cy', (d) => d.y);
-
-        // // 加入直線
-        // svg.append('line')
-        //     .attr('x1', 20)
-        //     .attr('y1', 20)
-        //     .attr('x2', 600)
-        //     .attr('y2', 20)
-        //     .style('stroke', 'black');
-
-        // const a = data.map(d => d.x);
-    </script>
-</body>
-
+    <script></script>
+  </body>
 </html>

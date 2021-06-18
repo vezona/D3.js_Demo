@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. DataBinding</title>
+    <style>
+      svg {
+        outline: 1px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <svg>
+        <circle></circle>
+      </svg>
+    </div>
+
+    <div class="container2"></div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+      const data = [
+        {
+          x: 100,
+          y: 30,
+        },
+        {
+          x: 180,
+          y: 30,
+        },
+        {
+          x: 250,
+          y: 30,
+        },
+      ];
+      //   contain 1，有一個circle
+      const svg = d3.select(".container").select("svg");
+      svg.insert("text");
+
+      // 加入資料
+      let dots = svg
+        .selectAll("circle")
+        .data(data)
+        .attr("r", 10)
+        .attr("fill", "red")
+        .attr("cx", (d) => d.x)
+        .attr("cy", (d) => d.y);
+      console.log(dots);
+
+      let svg2 = d3
+        .select(".container2")
+        .append("svg")
+        .attr("width", "300")
+        .attr("height", "200");
+
+      let dots2 = svg2.selectAll("circle").data(data);
+      // .enter()
+      // .append("circle")
+      // .attr("r", 10)
+      // .attr("fill", "red")
+      // .attr("cx", (d) => d.x)
+      // .attr("cy", (d) => d.y);
+      console.log(dots2);
+    </script>
+  </body>
+</html>
