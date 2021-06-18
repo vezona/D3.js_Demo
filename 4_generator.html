@@ -10,18 +10,20 @@
         svg {
             outline: 1px solid red;
         }
+
+        .arc path {
+            fill: orange;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <svg>
-            <path d="M40 50 L70 60 L70 40"
-            fill="none" stroke="black">
-
-            <text x="" y="" dx="" dy="" font-size="" text-anchor="">
-        </svg>
     </div>
+
+    <svg width="700" height="130">
+        <g class="arc" transform="translate(300, 65)"></g>
+    </svg>
 
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
@@ -45,11 +47,11 @@
 
         // svg
         const svg = d3.select('.container').append('svg');
-        svg.attr('width', 500)
-            .attr('height', 500);
-      
+        svg.attr('width', 400)
+            .attr('height', 300);
 
-        // symbol
+
+        // symbol Generator
         let symbol = d3.symbol() //使用符號產生器
             .size(100) //定義符號大小
             .type(d3.symbolStar) //決定哪種符號
@@ -63,7 +65,9 @@
             .attr('fill', 'blue')
             .attr('transform', d => `translate(${d.x},${d.y})`); //資料中的x
 
-        // Line
+
+        // ===================================
+        // Line Generator
         let data2 = [
             [1, 1],
             [2, 2],
@@ -85,18 +89,57 @@
             .attr('cy', d => d[1])
 
         // 畫線
-        // let lineGenerator = d3.line() //generator function
+        let lineGenerator = d3.line() //generator function
+        svg.append('g')
+            .append('path')
+            .attr('d', lineGenerator(dataSet))
+            .attr('fill', 'none').attr('stroke', 'red');
+
+        // defined
+        // let lineGenerator = d3.line().defined((d, i) => i == 2 ? undefined : true); //index2不畫線
         // svg.append('g')
         //     .append('path')
         //     .attr('d', lineGenerator(dataSet))
         //     .attr('fill', 'none').attr('stroke', 'red');
 
-        // defined
-        let lineGenerator = d3.line().defined((d, i) => i == 2 ? undefined : true); //index2不畫線
-        svg.append('g')
-            .append('path')
-            .attr('d', lineGenerator(dataSet))
-            .attr('fill', 'none').attr('stroke', 'red');
+        // ===================================
+        // 建立arc Generator
+        var arcGenerator = d3.arc()
+            .innerRadius(10)
+            .outerRadius(60)
+            .padAngle(.02)
+            .padRadius(100)
+            .cornerRadius(4);
+
+        // 定義資料集
+        var arcData = [{
+                startAngle: 0,
+                endAngle: 0.2
+            },
+            {
+                startAngle: 0.2,
+                endAngle: 0.6
+            },
+            {
+                startAngle: 0.6,
+                endAngle: 1.4
+            },
+            {
+                startAngle: 1.4,
+                endAngle: 3
+            },
+            {
+                startAngle: 3,
+                endAngle: 2 * Math.PI
+            }
+        ];
+
+        // 產生路徑，呼叫generator路徑
+        d3.select('.arc')
+            .selectAll('path')
+            .data(arcData)
+            .join('path')
+            .attr('d', arcGenerator);
     </script>
 </body>
 

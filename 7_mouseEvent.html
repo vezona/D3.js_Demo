@@ -10,6 +10,18 @@
         svg {
             outline: 1px solid red;
         }
+
+        .box1 {
+            display: flex;
+            justify-content: space-around;
+            font-size: 22px;
+            margin: 20px;
+        }
+
+        .box1 p {
+            outline: 1px solid blue;
+            padding: 20px
+        }
     </style>
 </head>
 
@@ -43,60 +55,93 @@
             },
         ];
 
-        // select 只選擇第一個p
-        d3.select('p').on('click', function () {
-            d3.select(this).style("color", "red");
-            d3.select(this).transition().style("transform", "translate(50px)");
-        });
 
+        // mouseover
+        d3.selectAll('p')
+            .on('mouseover', function () {
+                d3.select(this).style("color", "red")
+                    .transition().style("transform", "translate(50px)");
+            })
+            .on("mouseleave", function () {
+                d3.select(this).style("color", "black")
+                    .transition().style("transform", "translate(0)");
+            });
+
+        // =======================
         // svg
         const svg = d3.select('.container').append('svg');
         svg.attr('width', 500)
             .attr('height', 500);
 
-        let dots = svg.selectAll('circle')
-            .data(data)
-            .enter()
-            .append('circle')
-            .attr('r', 10)
-            .attr('fill', d => d.fill)
-            .attr('cx', d => d.x)
-            .attr('cy', (d) => d.y);
+        //pointer()、tooltip
+        let txt = svg.append("text");
+        svg.attr('cursor', 'pointer')
+            .on('mousemove', function () {
+                //d3.pointer會回傳陣列[X,Y]
+                let pt = d3.pointer(event, svg.node())
+                txt.attr('x', pt[0]) //取[x]
+                    .attr('y', pt[1]) //取[Y]
+                    // .text(`X：${pt[0]} | Y：${pt[1]}`)
+                    .text(`X：${parseInt(pt[0])} | Y：${parseInt(pt[1])}`)
+                console.log(pt)
+            });
 
-        // 滑鼠效果
+
+        // // Drag
+        // let dots = svg.selectAll('circle')
+        //     .data(data)
+        //     .enter()
+        //     .append('circle')
+        //     .attr('r', 10)
+        //     .attr('fill', d => d.fill)
+        //     .attr('cx', d => d.x)
+        //     .attr('cy', (d) => d.y);
+
+        // // 拖曳點點效果
+        // let dot = undefined, //圓形本身
+        //     color = undefined;
+
+        // // hover時變手手
+        // // invert的概念
         // let txt = svg.append("text");
-        // svg.attr('cursor', 'pointer')
-        //     .on('mousemove', function () {
-        //         let pt = d3.pointer(event, svg.node()) //d3.pointer會回傳陣列[X,Y]
+        // dots.on('mouseover', function () {
+        //         d3.select(this).attr('cursor', 'pointer')
+        //         let pt = d3.pointer(event, this)
+        //         let xt = d3.select(this).attr('cx')
+        //         let yt = d3.select(this).attr('cy')
+        //         //scale 的換算要用invert
+
+        //         // 製作tooltips
         //         txt.attr('x', pt[0]) //取[x]
         //             .attr('y', pt[1]) //取[Y]
-        //             .text(`${parseInt(pt[0])}, ${parseInt(pt[1])}`)
+        //             // .text(`X：${xt[0]} | Y：${pt[1]}`)
+        //             .text(`X：${xt} | Y：${yt}`)
+        //     })
+        //     .on('mouseleave', function () {
+        //         txt.text("")
+        //     })
+
+        // // 拖曳開始
+        // let drag = d3.drag()
+        //     .on('start', function () {
+        //         // 先存起原本顏色，選取點點
+        //         color = d3.select(this).attr("fill")
+        //         dot = d3.select(this).attr("fill", 'lime')
+        //         console.log(dot)
+        //     })
+        //     .on('drag', function () {
+        //         let pt = d3.pointer(event, this)
+        //         dot.attr('cx', pt[0]).attr('cy', pt[1])
         //         console.log(pt)
+        //     })
+        //     .on('end', function () {
+        //         dot.attr('fill', color);
+        //         dot = undefined;
         //     });
 
-        // 拖曳點點效果
-        let dot = undefined, //圓形本身
-            color = undefined;
-
-        let drag = d3.drag()
-            .on('start', function () {
-                color = d3.select(this).attr("fill")
-                dot = d3.select(this).attr("fill", 'lime')
-                console.log(dot)
-            })
-            .on('drag', function () {
-                let pt = d3.pointer(event, this)
-                dot.attr('cx', pt[0]).attr('cy', pt[1])
-                console.log(pt)
-            })
-            .on('end', function () {
-                dot.attr('fill', color);
-                dot = undefined;
-            });
-        // drag(d3.select("svg").selectAll("circle"));
-        drag(dots);
-        // 常用呼叫drag方式是
-        // dots.call(d3.drag().on().....)
+        // drag(dots);
+        // // 常用呼叫drag方式是
+        // // dots.call(d3.drag().on().....)
     </script>
 </body>
 
