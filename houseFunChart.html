@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好房實登w版圖表</title>
+    <style>
+        .chartBlock{
+            box-sizing: border-box;
+            width: 500px;
+            height: 320px;
+            border: 1px solid black;
+        }
+
+        .yAxis .tick text{
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .yAxis .tick line, .xAxis .tick line {
+            stroke: white;
+        }
+    </style>
+</head>
+<body>
+  <div class="chartBlock"></div>
+    
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const getData = async (url)=> {
+      // 取資料
+      dataGet = await d3.json(url)
+      data = dataGet.data
+      drawBarChart(data, '.chartBlock')
+    };
+
+    getData('./houseFunChart.json')
+
+    const drawBarChart = (data, DOM) => {
+      const svgWidth =  parseInt(d3.select(DOM).style('width')),
+            svgHeight = parseInt(d3.select(DOM).style('height')),
+            margin = 20;
+
+
+      const svg = d3.select(DOM)
+                    .append('svg')
+                    .attr('width', svgWidth)
+                    .attr('height', svgHeight);
+       
+      // 建立一個覆蓋svg的背景色
+      svg.append('rect')
+         .style("fill", "#F0F0F0")
+         .attr('width', svgWidth - margin*6)
+         .attr('height', svgHeight - margin*4)
+         .attr('transform', `translate(${margin*4}, ${margin*2})`)
+      
+      // 整理資料
+      const yData = data.map((i) => `${i.lowerLimit}~${i.upperLimit}`);
+      const subgroups =  ['dealPercentage', 'salePercentage']
+
+      // 設定要給 X 軸用的 scale 跟 axis
+      const xScale = d3.scaleLinear()
+                    .domain([0, 100])
+                    .range([margin*4, svgWidth - margin*2])
+                    .nice() // 補上終點值
+
+      const xAxis = d3.axisBottom(xScale)
+                      .tickSizeInner(-(svgHeight - margin*4))
+                      .tickPadding(10)
+
+        // 加上反方向短ticks
+      const xAxisTicks = d3.axisBottom(xScale)
+                      .tickFormat(d => '')
+
+      // 呼叫繪製x軸、調整x軸位置
+      const xAxisGroup = svg.append("g")
+                          .attr('class', 'xAxis')
+                          .call(xAxis)
+                          .attr("transform", `translate(0, ${svgHeight - margin*2})`)
+
+                          svg.append("g")
+                            .call(xAxisTicks)
+                            .attr("transform", `translate(0, ${svgHeight - margin*2})`)
+
+      // 設定要給 Y 軸用的 scale 跟 axis
+      const yScale = d3.scaleBand()
+                    .domain(yData)
+                    .range([svgHeight - margin*2, margin*2]) // 寬度
+                    .padding(0.3)
+
+      const yAxis = d3.axisLeft(yScale)
+                      .tickSizeOuter(0)
+                      .tickSizeInner(-(svgWidth-margin*6))
+                      .tickPadding(10)
+                      .tickFormat(i => {
+                        const range = i.split('~')
+                        if(range.includes('0')){
+                          return range[0] === '0'
+                          ? (+range[1] +1) + '萬以下'
+                          : range[0] + '萬以上'
+                        } else {
+                          return i+'萬'
+                        }
+                      })
+
+        // 加上反方向短ticks
+        const yAxisTicks = d3.axisLeft(yScale)
+                      .tickSizeOuter(0)
+                      .tickFormat(d => '')
+
+      // 呼叫繪製y軸、調整y軸位置
+      const yAxisGroup = svg.append("g")
+                          .attr('class', 'yAxis')
+                          .call(yAxis)
+                          .attr("transform", `translate(${margin*4},0)`)
+
+                          svg.append("g")
+                          .call(yAxisTicks)
+                          .attr("transform", `translate(${margin*4},0)`)
+
+      // 第二條y軸的比例尺，用來設定多條bar的位置
+      const ySubgroup = d3.scaleBand()
+                        .domain(subgroups)
+                        .range([0, yScale.bandwidth()])
+
+      // 設定不同 subgorup bar的顏色
+      const color = d3.scaleOrdinal()
+                    .domain(subgroups)
+                    .range(['#7cad13', '#3580cd'])
+
+      // 開始建立長條圖
+      const bar = svg.append('g')
+                     .selectAll('g')
+                     .data(data)
+                     .join('g')
+                     .attr('transform', d => `translate(0, ${yScale(d.lowerLimit +'~'+d.upperLimit)})`);
+            
+            // 分組
+            bar.selectAll('rect') 
+                .data(d => {
+                    return subgroups.map(key => {
+                        return {key:key, value:d[key]};})
+                    })
+                .join('rect')
+                .attr("x", margin*4)
+                .attr('y', d => ySubgroup(d.key))
+                .attr("height", ySubgroup.bandwidth())
+                .attr("width", d =>{
+                    return xScale(d.value)-margin*4})
+                .attr("fill", d => color(d.key))
+                // .append('text')
+            
+            // 文字資訊
+            bar.selectAll('a')
+               .data(d => {
+                    return subgroups.map(key => {
+                        return key === 'salePercentage'
+                        ? {key:key, value:d[key], url:d.url, saleCount:d.saleCount}
+                        : {key:key, value:d[key]};
+                      })
+                    })
+               .join('a')
+               .attr('href', d => d.url)
+               .attr('style', d=>  d.url? '': 'disabled')
+               .attr('style', d=> d.url? 'text-decoration: underline': '')
+               .append('text')
+               .attr("x", d => xScale(d.value) + 5)
+               .attr('y', d => ySubgroup(d.key) + 12)
+               .attr('fill', d => d.url? 'blue': 'black')
+               .attr('font-size', '12px')
+               .text(d => {
+                return d.url
+                ? `${d.value}% (${d.saleCount}件)`
+                : d.value + '%'
+               });
+    
+      // 加上類別標示
+      const tagsWrap =  svg.append('g')
+                        .selectAll('g')
+                        .attr('class', 'tags')
+                        .data(subgroups)
+                        .enter()
+                        .append('g')
+
+            tagsWrap.append('rect')
+                    .attr('x', (d, i)=> (i+1)*120)
+                    .attr('y', 12)
+                    .attr('width', 20)
+                    .attr('height', 10)
+                    .attr('fill', d => color(d))
+
+            tagsWrap.append('text')
+                    .attr('x', (d,i)=> (i+1)*120+50)
+                    .attr('y', 22)
+                    .style('fill', '#000')
+                    .style('font-size', '12px')
+                    .style('font-weight', 'bold')
+                    .style("text-anchor", 'middle')
+                    .text(d => {
+                        return d === 'dealPercentage'
+                        ? '成交佔比'
+                        : '銷售佔比'
+                    })
+            
+    };
+ 
+ </script>
+</body>
+</html>

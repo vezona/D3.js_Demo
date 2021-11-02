@@ -1,0 +1,22 @@
+{
+    "apiVersion": "1.0.0",
+    "method": "/api/v1/dealcase/priceReport.GET",
+    "status": "Success",
+    "id": "8000079c-0003-ea00-b63f-84710c7967bb",
+    "data": {
+      "url": "台北市",
+      "district": null,
+      "avgSellUnitPrice": 82.2,
+      "avgDealUnitPrice": 67.9,
+      "dealDetail": {
+        "higherPrice": {
+          "avgUnitPrice": 98.7,
+          "priceVarietyPercentage": 0.2
+        },
+        "lowerPrice": {
+          "avgUnitPrice": 42.4,
+          "priceVarietyPercentage": 0.0
+        }
+      }
+    }
+  }

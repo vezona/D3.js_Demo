@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 蓋掉瀏覽器預設 */
+    .dealTab{
+      padding: 0;
+      margin-block-start: inherit;
+    }
+
+    .wrap{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 原本樣式 */
+    .dealPriceJPlot{ width:636px; float:left; margin-right:10px; position:relative; padding-top:30px; z-index:99; }
+    .dealPriceJPlot ul{ display:block; height: 31px; position:absolute; left:0px; top:0px; width:636px; }
+    .dealPriceJPlot li{ display: inline-block; background:url(./images/tabs.jpg) 87px top; width:87px; height:31px; line-height:31px; text-align:center; zoom:1;  float:left; margin-right:5px; }
+    .dealPriceJPlot li a{ display:inline-block; height:31px; width:100%; }
+    .dealPriceJPlot li.dealTab_focus{  background:url(./images/tabs.jpg) left top; }
+    .dealPriceJPlot li + li + li{ background:none; width:95px; text-align:right;  float:right !important; margin-right:0px; }
+    .dealPriceJPlot li select{ margin:0px; }
+    .dealPriceJPlot_block{ border:1px solid #CFCCC3; padding:10px 10px;}
+    .dealPriceJPlot_block_p{ font-size:12px; color:#999999; text-align:center;}
+     #chartdiv1{ margin-bottom: 10px; }
+
+     /* 原本tool-tip 樣式 */
+     .bubble_content{
+        background-color: #fff;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        padding: 10px;
+        width: 180px;
+        border: 1px solid #b2c3cd;
+     }
+
+    .bubble_content h3 {
+        margin:0;
+        font-size: 15px;
+        font-weight: bold;
+        color: #777777;
+        border-bottom: 1px #999 dotted;
+        margin-bottom: 0px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .bubble_content p span{
+        font-weight: bold;
+    }
+
+    .color_h {
+        color: #993300;
+    }
+
+    .color_m {
+        color: #C09B4E;
+    }
+
+    .color_l {
+        color: #4E79A9;
+    }
+
+     /* 我的設定 */
+     .bubble_content p {  /*處理系統預設，不須上*/
+        margin : 0;
+        font-size: 12px
+     }
+
+     .bubble_content h3{
+         margin-bottom:6px
+     }
+
+     /* 棋盤線段 */
+     #chartdiv1 .xAxis .tick text,
+     #chartdiv1 .yAxis .tick text,
+     #chartdiv2 .xAxis .tick text,
+     #chartdiv2 .yAxis .tick text{
+        font-size: 12px;
+    }
+
+    #chartdiv1 .xAxisTicks .tick line, 
+    #chartdiv1 .yAxisTicks .tick line,
+    #chartdiv2 .xAxisTicks .tick line, 
+    #chartdiv2 .yAxisTicks .tick line {
+        stroke: rgb(172, 172, 172);
+    }
+    </style>
+</head>
+<body>
+
+    <!-- 實價登錄 -->
+    <div class="ShowChartDiv1"></div> 
+
+    <!-- 銷售行情 -->
+    <div class="ShowChartDiv2"></div>
+
+    <!-- chart -->
+    <div class="wrap">
+        <div class="dealPriceJPlot">
+            <ul class="dealTab">
+                <li id="Chart1" class="dealTab_focus"><a onclick="ActionChart('1', '#chartdiv1')" href="javascript:;">實價登錄</a></li>
+                <li id="Chart2" class=""><a onclick="ActionChart('2', '#chartdiv2')" href="javascript:;">銷售行情</a></li>
+                <li id="ChartOption1" style="display: block;">
+                    <select name="ShowChartA" onChange="getData(value, '#chartdiv1')">
+                        <option id="ShowChart2Year" value="1">兩年趨勢</option>
+                        <option id="ShowChart1Year" value="2">一年趨勢</option>
+                        <option id="ShowChart6Month" value="3">6個月趨勢</option>
+                    </select>
+                </li>
+                <li id="ChartOption2" style="display: none;">
+                    <select name="ShowChartB" onChange="getData(value, '#chartdiv2')">
+                        <option id="ShowChartMonth" value="m">月趨勢</option>
+                        <option id="ShowChartWeek" value="w">週趨勢</option>
+                    </select>
+                </li>
+            </ul>
+            <div id="ShowChartDiv1" class="dealPriceJPlot_block noteRelay s5" style="display: block;">
+                <!-- <iframe id="IFrameChart1" width="620" height="292" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
+                <div id="chartdiv1" style="width: 620px; height: 285px; position: relative;" class=""></div>
+                
+                <!-- Footer -->
+                <p class="dealPriceJPlot_block_p">以上銷售、成交平均資料來源為好房網平均實價登錄之平均成交單價數據資料及平均銷售行情之平均銷售單價數據資料的上月上架房屋與成交房屋資料，數據可能因數量多寡有所偏差，不完全代表市場真實行情。</p>
+                <div class="indexPriceNote" style="top: 320px;">
+                    <div class="count_sheet_exp">?</div>
+                    <div class="count_sheet_exp_content" style="display: none;">好房網平均實價登錄之平均成交單價數據資料及平均銷售行情之平均銷售單價數據資料，是由永慶房屋、永慶不動產、有巢氏房屋及台慶不動產四大品牌房仲公司提供。  </div>   
+                 </div>
+            </div>
+            <div id="ShowChartDiv2" class="dealPriceJPlot_block noteRelay s5" style="display: none;">
+                <!-- <iframe id="IFrameChart2" width="620" height="312" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
+                <!-- <p class="dealPriceJPlot_block_p"></p> -->
+                <div id="chartdiv2" style="width: 620px; height: 285px; position: relative;" class="">
+                    <!-- <div style="margin-top:140px;">正在為您載入圖表 請稍後...</div> -->
+                </div>
+                
+                <!-- Footer -->
+                <p class="dealPriceJPlot_block_p">以上銷售、成交平均資料來源為好房網平均實價登錄之平均成交單價數據資料及平均銷售行情之平均銷售單價數據資料的上月上架房屋與成交房屋資料，數據可能因數量多寡有所偏差，不完全代表市場真實行情。</p>
+                <div class="indexPriceNote" style="top: 320px;">
+                    <div class="count_sheet_exp">?</div>
+                    <div class="count_sheet_exp_content" style="display: none;">好房網平均實價登錄之平均成交單價數據資料及平均銷售行情之平均銷售單價數據資料，是由永慶房屋、永慶不動產、有巢氏房屋及台慶不動產四大品牌房仲公司提供。  </div>   
+                </div>    
+            </div>
+            </div>
+
+    </div>
+
+    
+   <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.1.0.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>        
+    // tab 切換
+    const ActionChart = (no, DOM) => {
+        getData(no, DOM)
+        $('li[id^=Chart]').removeClass('dealTab_focus');
+        $('[id^=ShowChartDiv]').hide();
+        $('[id^=ChartOption]').hide();
+        $('li#Chart' + no).addClass('dealTab_focus');
+        $('#ShowChartDiv' + no).show();
+        $('#ChartOption' + no).show();
+        if (no == '2' && $('#chartdiv2 div').html() == '正在為您載入圖表 請稍後...') {
+            $('#ShowChartMonth').click();
+        }
+        // 下方檢查IE刪了
+    }
+
+
+    // 抓目前城區
+    // getAreas(window.location.href)
+
+    // 抓目前日期時間
+    const now = new Date();
+    let currentYear = now.getFullYear(),
+        currentMonth = now.getMonth() + 1
+        currentDate = now.getDate();
+
+    let StartDate = [currentYear-2, currentMonth, currentDate].join('-'), 
+        endDate = [currentYear, currentMonth, currentDate].join('-')
+
+    // 取資料
+    const getData = async (val, DOM) => {
+        // 實價登錄選擇時間範圍
+        switch(val){
+            case '1' : // 兩年
+            StartDate =  [currentYear - 2, currentMonth, currentDate].join('-')
+            break;
+            case '2' : // 一年
+            StartDate =  [currentYear - 1, currentMonth, currentDate].join('-')
+            break;
+            case '3' : // 六個月
+            StartDate =  [currentYear, currentMonth - 6, currentDate].join('-')
+            break;
+            case 'm' : // 月趨勢
+            StartDate =  [currentYear -1, currentMonth, currentDate].join('-')
+            break;
+            case 'w' : // 週趨勢
+            StartDate =  [currentYear -1, currentMonth, currentDate].join('-')
+            break;
+        }
+        // API URL
+        let type = ''
+        val === '1' || '2' || '3'
+        ? type = '1'
+        : type = '2'
+
+        // ajax
+        let dataGet;
+        DOM === '#chartdiv1'
+        ? dataGet = await d3.json('./houseFunChart2.json')
+        : dataGet = await d3.json('./houseFunChart2_week.json')
+        let data = dataGet.data
+        drawBarChart(data, val, DOM)
+
+
+    //   dataGet = await d3.json(`/api/v1/dealcase/priceTrendSummary?PriceTrendType=${type}&StartDate=${StartDate}&EndDate=${endDate}&CountyId=${countryId}&DistrictId=${districtId}`)
+    //   data = dataGet.data
+    //   drawBarChart(data, '.chartBlock')
+    };
+    // API: http://price2-t.housefun.com.tw/api/v1/dealcase/priceTrendSummary?PriceTrendType=1&StartDate=2019-10-01&EndDate=2021-10-01&CountyId=0&DistrictId=2
+
+
+    // 繪製圖表
+    const drawBarChart = (data, tabOption, DOM) => {
+        console.log(tabOption);
+        console.log(data);
+        // 刪除原本的svg.charts
+        d3.select(`${DOM} svg`).remove();
+
+        // console.log(data)
+        const svgWidth =  parseInt(d3.select(DOM).style('width')),
+            svgHeight = parseInt(d3.select(DOM).style('height')),
+            marginX = 30;
+        
+        let marginY = 45,
+            ticksNumber = 24, 
+            rotateDeg = -45,
+            dx = -25
+
+            if( tabOption === '1'){
+                marginY = 45
+                ticksNumber = 24
+                rotateDeg = -45
+            } else if (tabOption === '2' || tabOption === 'm'){
+                marginY = 35
+                ticksNumber = 12
+                rotateDeg = -25
+            } else if (tabOption === '3') {
+                marginY = 20
+                ticksNumber = 6
+                rotateDeg = 0
+                dx = 0
+            } else {
+                marginY = 45
+                ticksNumber = 52
+                rotateDeg = -25
+            }
+
+        const svg = d3.select(DOM)
+                        .append('svg')
+                        .attr('width', svgWidth)
+                        .attr('height', svgHeight);
+
+        // 建立一個覆蓋svg的背景色
+        svg.append('rect')
+            .style("fill", "#fffdf6")
+            .attr('width', svgWidth - marginX*3)
+            .attr('height', svgHeight - (marginY + marginX))
+            .attr('transform', `translate(${marginX*2}, ${marginX})`)
+        
+        // 設定 format 時間日期的方法
+        let parseTime;
+        if(data.map(d => d.week !== null).every(d=> d === true)){ //'有week'
+          parseTime = (d) => { return d3.timeParse("%Y-%m-%W")(d) }
+        } else {
+            parseTime = (d) => { return d3.timeParse("%Y-%m")(d) }
+        }
+        
+        // 整理資料
+        const xData = data.map(d=> [d.year, d.month, d.week].filter(d => d !== null).join('-'))
+        const groups = ['avgUnitPrice25', 'avgUnitPrice50', 'avgUnitPrice75']
+        const dataGroups = groups.map(groupName => {
+            return {
+                name: groupName,
+                values: data.map(d => {
+                    return { value: +d[groupName], time: [d.year, d.month, d.week].filter(d => d !== null).join('-')}
+                })
+            }
+        })
+
+        console.log(dataGroups)
+        
+
+        // X 軸與比例尺
+        const xScale = d3.scaleTime()
+                        .domain(d3.extent(xData, d => parseTime(d)))
+                        .range([marginX*2, svgWidth - marginX])
+                        .nice()
+        
+        let xAxis;
+        if(tabOption === 'w'){
+            xAxis = d3.axisBottom(xScale)
+                    .tickFormat(d3.timeFormat("%Y-%m-%W"))
+                    .ticks(23)
+        } else {
+            xAxis = d3.axisBottom(xScale)
+                    .tickFormat(d3.timeFormat("%Y-%m"))
+                    .ticks(ticksNumber)
+        }
+                        
+        
+        // 設定棋盤線段scale
+        const xAxisTicks = d3.axisBottom(xScale)
+                    .tickSizeInner(-(svgHeight-(marginY + marginX)))
+                    .tickFormat(d => '')
+                    .ticks(ticksNumber)
+
+        svg.append('g')
+            .call(xAxis)
+            .attr('class', 'xAxis')
+            .attr('transform', `translate(0, ${svgHeight - marginY})`)
+
+        svg.append('g')
+            .call(xAxisTicks)
+            .attr('class', 'xAxisTicks')
+            .attr('transform', `translate(0, ${svgHeight - marginY})`)
+        
+        // 調整標籤角度
+        d3.selectAll('.xAxis')
+            .selectAll('.tick text')
+            .attr('dx', `${dx}`)
+            .style('transform', `rotate(${rotateDeg}deg)`)
+
+
+        // Y 軸與比例尺
+        const yScale = d3.scaleLinear()
+                        .domain([0, 140])
+                        .range([svgHeight - marginY, marginX])
+                        .nice()
+        
+        const yAxis = d3.axisLeft(yScale)
+                        .ticks(8)
+
+        // 設定棋盤線段scale
+        const yAxisTicks = d3.axisLeft(yScale)
+                    .tickSizeInner(-(svgWidth - marginX*3))
+                    .tickFormat(d => '')
+
+        svg.append('g')
+            .call(yAxis)
+            .attr('class', 'yAxis')
+            .attr('transform', `translate(${marginX*2}, 0)`)
+
+        svg.append('g')
+            .call(yAxisTicks)
+            .attr('class', 'yAxisTicks')
+            .attr('transform', `translate(${marginX*2}, 0)`)
+    
+        // 設定組別顏色
+        const color = d3.scaleOrdinal()
+                    .domain(groups)
+                    .range([ '#3580cd', '#c09b4e','#993300'])
+        
+        // 開始建立折線圖
+        const line = svg.append('g')
+                        .attr('class', 'lineChart')
+                
+        // 設定折線圖相關資料
+        const lineChart = d3.line()
+                .x((d) => xScale(parseTime(d.time)))
+                .y((d) => yScale(+d.value))
+
+                line.selectAll('.line')
+                .data(dataGroups)
+                .join('path')
+                .attr('class', '.line')
+                .attr("fill", "none")
+                .attr("stroke", d => color(d))
+                .attr("stroke-width", 2)
+                .attr("d", d => lineChart(d.values))
+
+        // 加上圓點點
+        const dots = svg.selectAll('dotGroups') 
+                    .data(dataGroups)
+                    .join('g')
+                    .attr('stroke', d => color(d))
+                    .attr('fill', d => color(d))
+                    .selectAll('dots') // 定義各組各自的點
+                    .data(d => d.values) 
+                    .join('circle')
+                    .attr('r', '3')
+                    .attr('cx', d => xScale(parseTime(d.time)))
+                    .attr('cy', d => yScale(+d.value))
+                    .attr('stroke-width', '2')
+                    .style('cursor', 'pointer')
+                    .on('mouseover', dotsMouseover)
+                    .on('mouseleave', dotsMouseleave);
+
+        // 建立tooltips
+        const tooltip = d3.select(DOM)
+                    .append('div')
+                    .attr('class', 'bubble_content')
+                    .style('position', 'absolute')
+                    .style("opacity", 0)
+                    
+        // 滑鼠事件
+        function dotsMouseover(d){
+            const pt = d3.pointer(event, svg.node())
+            let targetDate = d.target.__data__.time
+
+            // 圓點放大
+            d3.select(this).attr('r', '5')
+            
+            // 取同時期，三條線段不同的數值
+            let groupValues = dataGroups.map(d => {
+            let value = d.values.filter(i => {
+                    return i.time === targetDate
+                })
+            return {
+                name:d.name, 
+                value: value[0].value
+            }
+            })
+
+            tooltip.style("opacity", 1)
+                    .style('left', (pt[0]+20) + 'px')
+                    .style('top', (pt[1]) + 'px')
+                    .html(`<h3>${d.target.__data__.time.split('-')[0]}年${d.target.__data__.time.split('-')[1]}月</h3>
+                    <p><span class="color_h">最高單價平均：</span> ${groupValues[2].value} 萬/坪</p>
+                    <p><span class="color_m">住宅單價平均：</span> ${groupValues[1].value} 萬/坪</p>
+                    <p><span class="color_l">最低單價平均：</span> ${groupValues[0].value} 萬/坪</p>
+                    `)
+        }
+
+        function dotsMouseleave(d){
+            d3.select(this).attr('r', '3')
+            tooltip.style("opacity", 0)
+        }
+
+        // 加上類別標示
+        const tagsWrap =  svg.append('g')
+                    .selectAll('g')
+                    .attr('class', 'tags')
+                    .data(dataGroups)
+                    .enter()
+                    .append('g')
+
+        tagsWrap.append('rect')
+                .attr('x', (d, i)=> (i+1)*140)
+                .attr('y', 8)
+                .attr('width', 20)
+                .attr('height', 10)
+                .attr('fill', d => color(d))
+
+        tagsWrap.append('text')
+                .attr('x', (d, i)=> (i+1)*140+60)
+                .attr('y', 18)
+                .style('fill', '#000')
+                .style('font-size', '12px')
+                .style('font-weight', 'bold')
+                .style("text-anchor", 'middle')
+                .text(d => {
+                    return d.name === 'avgUnitPrice25' ? '最低平均單價'
+                    : d.name === 'avgUnitPrice50' ? '住宅平均單價'
+                    : '最高平均單價'
+                })
+
+
+    };
+
+    getData('1', '#chartdiv1');
+
+    </script>
+</body>
+</html>

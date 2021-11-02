@@ -1,0 +1,53 @@
+{
+    "apiVersion": "1.0.0",
+    "method": "/api/v1/dealcase/priceRangeSummary.GET",
+    "status": "Success",
+    "id": "8000d538-8002-c200-b63f-84710c7967bb",
+    "data": [
+      {
+        "sortNum": 1,
+        "lowerLimit": 0.0,
+        "upperLimit": 999.0,
+        "saleCount": 7,
+        "salePercentage": 7.4,
+        "dealPercentage": 30.0,
+        "url": "https://buy-s.housefun.com.tw/region/台北市-大同區_c&hd_Purpose=K/0-999_price/-50_age/od=Sequp"
+      },
+      {
+        "sortNum": 2,
+        "lowerLimit": 1000.0,
+        "upperLimit": 1999.0,
+        "saleCount": 33,
+        "salePercentage": 34.7,
+        "dealPercentage": 30.0,
+        "url": "https://buy-s.housefun.com.tw/region/台北市-大同區_c&hd_Purpose=K/1000-1999_price/-50_age/od=Sequp"
+      },
+      {
+        "sortNum": 3,
+        "lowerLimit": 2000.0,
+        "upperLimit": 2999.0,
+        "saleCount": 18,
+        "salePercentage": 18.9,
+        "dealPercentage": 23.3,
+        "url": "https://buy-s.housefun.com.tw/region/台北市-大同區_c&hd_Purpose=K/2000-2999_price/-50_age/od=Sequp"
+      },
+      {
+        "sortNum": 4,
+        "lowerLimit": 3000.0,
+        "upperLimit": 5999.0,
+        "saleCount": 30,
+        "salePercentage": 31.6,
+        "dealPercentage": 13.3,
+        "url": "https://buy-s.housefun.com.tw/region/台北市-大同區_c&hd_Purpose=K/3000-5999_price/-50_age/od=Sequp"
+      },
+      {
+        "sortNum": 5,
+        "lowerLimit": 6000.0,
+        "upperLimit": 0.0,
+        "saleCount": 7,
+        "salePercentage": 7.4,
+        "dealPercentage": 3.3,
+        "url": "https://buy-s.housefun.com.tw/region/台北市-大同區_c&hd_Purpose=K/6000-0_price/-50_age/od=Sequp"
+      }
+    ]
+  }

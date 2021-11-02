@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*縣市行情頁 - 房市資訊區塊*/
+        .county_h2{ font-size:16px; font-weight:bold; color:#376C00; text-align:center; margin-bottom:10px; line-height:20px; }
+        .county_h2 .ad{color: #005a9c;}
+        .slashGreen{ background:url(../images/slashBar.jpg) repeat-x; line-height:33px; height:33px; display:inline-block; border:1px solid #6B9D2F; border-width:0 1px; margin-right:10px; }
+        .slashOrg{ background:url(../images/slashBar.jpg) repeat-x left -33px;; line-height:33px; height:33px; display:inline-block; border:1px solid #FF9966; border-width:0 1px; margin-right:10px; }
+        .county_top{ background-color:#F3F1EB; padding:13px; margin-bottom:30px;}
+        .top_chart{ background-color:#fff; padding:20px; width:568px; margin-right:10px; float:left; height:99px; }
+        .top_chart_p{ height:33px; line-height:33px; display:block; }
+        .top_chart_p span{ line-height:33px; height:33px; display:inline-block; vertical-align:top; font-family:Arial, Helvetica, sans-serif, 新細明體;  }
+        .top_chart_p .top_chart_price_t{ color:#006600; font-size:15px; font-weight:bold; margin-right:5px; }
+        .greenChart { margin-bottom:25px;}
+        .greenChart .top_chart_price_t{ color:#000;/*006600*/ }.orgChart .top_chart_price_t{ color:#000;/*DA6C32*/ }
+        .top_chart_price{ font-size:18px; font-weight:bold; color:#ff0000; margin-right:5px;}
+        .top_chart_unit{ vertical-align: baseline !important;}
+        .m500_county{ width:310px; float:left; padding-left:5px; border-left:1px dotted #999; }
+        .m500_county .m500_in{ padding-right:0px; padding-top:0px; border-right:0px; padding-bottom:11px; }
+        .m500_county .m500_in + .m500_in{ padding-bottom:0px; }
+        .m500_county_Note{ clear: both; margin-top: 150px;  *margin-top: 10px; display: block; color: #666;}
+
+        .fBig{ font-size:15px !important; color:#ff0000 !important; }
+
+        .m500{ background-color:#f2f1ec; margin-bottom:20px; margin-top: -2px; }
+        .m500 h1{ text-align:center; font-size:13px !important; color:#fff; font-weight:normal; background-color:#a9a393; line-height:30px !important;  }
+        .m500 h1 span{ font-size:18px; font-weight:bold; color:#fbfa16; }
+        .m500_in{ padding:13px 0px 13px 5px; width:313px; float:left; }
+        .last_m500{ border-width: 0px; }
+        .m500_in h3{ font-size:15px; font-weight:bold; width:28px; line-height:25px; float:left; text-align:center; }
+        .m500_in_white{ background-color:#fff; padding:5px 0px 5px 30px; width:280px; float:left; }
+        .m500_in_white .cate{font-size: 15px; font-weight: bold; margin-right: 5px;}
+        .m500_in_white .avg{ text-align:center; line-height:23px; width:100px; float:left; margin-right:5px; }
+        .m500_in_white .avg .gray{ color:#959490; }
+        .m500_in_white .avg .red{ color:#ff0000; font-size:21px; font-weight:bold; }
+        .compareM{ line-height:36px; margin-top:7px; }
+        .compareY{ line-height:20px;}
+
+        .m500_in_white .up { color:red; padding-left:20px; background-position:4px 0px; }
+        .m500_in_white .down { color:#090; padding-left:20px; background-position:4px -21px; }
+        .clearfix { display:block }
+
+        .f22 {
+            font-size: 22px !important;
+            line-height: 30px !important;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif, 新細明體;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="county_top clearfix noteRelay s4">
+		<div class="top_chart">
+          <p class="top_chart_p greenChart"><span class="top_chart_price_t fBig">銷售</span><span class="top_chart_price_t">平均</span><span id="AvgSellPrice" class="slashGreen" style="width: 330px;"></span><span class="top_chart_price" id="selP">81.4</span><span class="top_chart_unit">萬/坪</span></p>
+          <p class="top_chart_p orgChart"><span class="top_chart_price_t fBig">成交</span><span class="top_chart_price_t">平均</span><span id="AvgDealPrice" class="slashOrg" style="width: 276px;"></span><span class="top_chart_price" id="dealP">67.8</span><span class="top_chart_unit">萬/坪</span></p>
+        </div>
+		<div class="m500_county">
+          <div id="li_75" class="m500_in clearfix">
+            <div class="m500_in_white">
+              <p class="avg"><span class="cate">較高</span><span class="gray">單價平均</span><br>
+                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=89-108"><span class="red f22">98.5</span></a> 萬/坪</p>
+              <p class="compareM">跟上月比較：<span class="up">0.9%</span></p>
+              <p class="compareY" style="display:none">跟去年同期比較：</p>
+            </div>
+          </div>
+          <div id="li_25" class="m500_in clearfix">
+            <div class="m500_in_white">
+              <p class="avg"><span class="cate">較低</span><span class="gray">單價平均</span><br>
+                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=38-47"><span class="red f22">42.4</span></a> 萬/坪</p>
+              <p class="compareM">跟上月比較：持平</p>
+              <p class="compareY" style="display:none">跟去年同期比較：</p>
+            </div>
+          </div>
+          
+          
+        </div>
+		<p class="m500_county_Note">以上銷售、成交平均資料來源為好房網平均實價登錄之平均成交單價數據資料及平均銷售行情之平均銷售單價數據資料的上月上架房屋與成交房屋資料，數據可能因數量多寡有所偏差，不完全代表市場真實行情。</p>
+		<div class="indexPriceNote">
+			<div class="count_sheet_exp">?</div>
+			<div class="count_sheet_exp_content" style="display: none;">好房網平均實價登錄之平均成交單價數據資料，是由永慶房屋、永慶不動產、有巢氏房屋及台慶不動產四大品牌房仲公司提供。  </div>
+		</div> 
+    </div>
+
+    <!-- --------------JS-------------------- -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>
+    var ltm_data = {
+        "pagedata":{
+            "areas":[
+                {
+                    "city": "台北市",
+                    "district": ""
+                }
+            ]
+        },
+    }
+
+    var HF = {
+        area:[{cityCode: "0000", cityName: "台北市", cityNumber: "0"}]
+    }
+
+    $(function () {
+        // 取城市、月份資訊
+        const cityName = ltm_data.pagedata.areas[0].city,
+            countyId = HF.area.filter(city => city.cityName === cityName)[0]['cityCode'];
+        
+        const now = new Date();
+        const currentYear = now.getFullYear(),
+            currentMonth = now.getMonth() + 1,
+            currentDate = now.getDate();
+        
+        d3.select('.county_h2 .ad').text(cityName)
+        d3.select('.county_h2 .currentMonth').text(currentMonth)
+        
+
+        // ajax
+        // http://price2-t.housefun.com.tw/api/v1/dealcase/priceReport?County=0
+        const getData = async (countyId) => {
+            // ajax 取資料
+            dataGet = await d3.json('./houseInfo.json')
+            // dataGet = await d3.json(`/api/v1/dealcase/priceReport?County=${countyId}`)
+            data = dataGet.data
+            drawHouseInfoChart(data)
+        }
+
+        const drawHouseInfoChart = (data) =>{
+            console.log(data)
+            d3.select('.top_chart .greenChart').append('svg')
+
+        }
+
+        getData(countyId)
+
+    });
+
+
+    </script>
+</body>
+</html>
