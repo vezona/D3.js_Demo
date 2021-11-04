@@ -52,28 +52,34 @@
             font-family: Arial, Helvetica, sans-serif, 新細明體;
             font-weight: bold;
         }
+
     </style>
 </head>
 <body>
     <div class="county_top clearfix noteRelay s4">
 		<div class="top_chart">
-          <p class="top_chart_p greenChart"><span class="top_chart_price_t fBig">銷售</span><span class="top_chart_price_t">平均</span><span id="AvgSellPrice" class="slashGreen" style="width: 330px;"></span><span class="top_chart_price" id="selP">81.4</span><span class="top_chart_unit">萬/坪</span></p>
-          <p class="top_chart_p orgChart"><span class="top_chart_price_t fBig">成交</span><span class="top_chart_price_t">平均</span><span id="AvgDealPrice" class="slashOrg" style="width: 276px;"></span><span class="top_chart_price" id="dealP">67.8</span><span class="top_chart_unit">萬/坪</span></p>
-        </div>
+          <!-- <p class="top_chart_p greenChart">
+            <span class="top_chart_price_t fBig">銷售</span><span class="top_chart_price_t">平均</span><span id="AvgSellPrice" class="slashGreen" style="width: 330px;"></span><span class="top_chart_price" id="selP">81.4</span><span class="top_chart_unit">萬/坪</span>
+          </p>
+          <p class="top_chart_p orgChart">
+            <span class="top_chart_price_t fBig">成交</span><span class="top_chart_price_t">平均</span><span id="AvgDealPrice" class="slashOrg" style="width: 276px;"></span><span class="top_chart_price" id="dealP">67.8</span><span class="top_chart_unit">萬/坪</span>
+          </p> -->
+    </div>
+
 		<div class="m500_county">
           <div id="li_75" class="m500_in clearfix">
             <div class="m500_in_white">
               <p class="avg"><span class="cate">較高</span><span class="gray">單價平均</span><br>
-                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=89-108"><span class="red f22">98.5</span></a> 萬/坪</p>
-              <p class="compareM">跟上月比較：<span class="up">0.9%</span></p>
+                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=89-108"><span class="red f22 avgHigh">00.5</span></a> 萬/坪</p>
+              <p class="compareM">跟上月比較：</p>
               <p class="compareY" style="display:none">跟去年同期比較：</p>
             </div>
           </div>
           <div id="li_25" class="m500_in clearfix">
             <div class="m500_in_white">
               <p class="avg"><span class="cate">較低</span><span class="gray">單價平均</span><br>
-                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=38-47"><span class="red f22">42.4</span></a> 萬/坪</p>
-              <p class="compareM">跟上月比較：持平</p>
+                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=38-47"><span class="red f22 avgLow">00.4</span></a> 萬/坪</p>
+              <p class="compareM">跟上月比較：</p>
               <p class="compareY" style="display:none">跟去年同期比較：</p>
             </div>
           </div>
@@ -119,7 +125,6 @@
         d3.select('.county_h2 .ad').text(cityName)
         d3.select('.county_h2 .currentMonth').text(currentMonth)
         
-
         // ajax
         // http://price2-t.housefun.com.tw/api/v1/dealcase/priceReport?County=0
         const getData = async (countyId) => {
@@ -128,17 +133,139 @@
             // dataGet = await d3.json(`/api/v1/dealcase/priceReport?County=${countyId}`)
             data = dataGet.data
             drawHouseInfoChart(data)
+            drawHouseInfoCompare(data)
         }
 
         const drawHouseInfoChart = (data) =>{
             console.log(data)
-            d3.select('.top_chart .greenChart').append('svg')
+            const margin = 20;
+            const width = 568
+            console.log(width);
+            const svg = d3.select('.top_chart')
+                          .append('svg')
+                          .attr('width', width)
+                          .attr('height', 100)
 
+            const greenChart = svg.append('g')
+                                  .attr('class', 'greenChart top_chart_p')
+                  
+                  greenChart.append('text')
+                              .attr('class', 'top_chart_price_t fBig')
+                              .attr('x', 0)
+                              .attr('y', margin)
+                              .attr('fill', 'red')
+                              .text('銷售')
+
+                  greenChart.append('text')
+                              .attr('class', 'top_chart_price_t')
+                              .attr('x', margin*2)
+                              .attr('y', margin)
+                              .attr('fill', 'black')
+                              .text('平均')
+
+            const orangeChart = svg.append('g')
+                                  .attr('class', 'orangeChart top_chart_p')    
+
+
+                  orangeChart.append('text')
+                              .attr('class', 'top_chart_price_t fBig')
+                              .attr('x', 0)
+                              .attr('y', margin*4)
+                              .attr('fill', 'red')
+                              .text('成交')
+  
+                  orangeChart.append('text')
+                              .attr('class', 'top_chart_price_t')
+                              .attr('x', margin*2)
+                              .attr('y', margin*4)
+                              .attr('fill', 'black')
+                              .text('平均')
+  
+            const xScale = d3.scaleLinear()
+                            .domain([0, 100])
+                            .range([margin*5, 400])
+
+            const yScale = d3.scaleBand()
+                            .domain(['avgSellUnitPrice', 'avgDealUnitPrice'])
+                            .range([2, 100])
+
+            const avgData = Object.entries(data).filter(d => d[0] === 'avgSellUnitPrice' || d[0] ==='avgDealUnitPrice')
+                  xData = avgData.map(d=>d[1])
+                  yData = avgData.map(d=>d[0])
+
+            
+            const color = d3.scaleOrdinal()
+                          .domain(['avgSellUnitPrice', 'avgDealUnitPrice'])
+                          .range(['#4daf4a', '#f29909'])   
+
+            // 開始建立長條圖
+            const bar = svg.selectAll("rect")
+                          .data(avgData)
+                          .join("rect")
+                          .attr('x', margin*5)
+                          .attr('y', d => yScale(d[0]))
+                          .attr('height', 30)
+                          .transition()
+                          .duration(1500)
+                          .attr('width', d => xScale(d[1]))
+                          .attr("fill", d => color(d))
+
+
+            // 長條圖資訊
+            const barInfo = svg.append('g')
+                          .selectAll("text")
+                          .data(avgData)
+                          .join("text")
+                          
+                  barInfo.append('tspan')
+                            .attr('x', d => xScale(d[1]) + margin*6)
+                            .attr('y', d => yScale(d[0]) + margin)
+                            .style('fill', 'red')
+                            .style('font-weight', 'bold')
+                            .style('font-size', '18px')
+                            .text(d => d[1])
+
+                  barInfo.append('tspan')
+                            .attr('x', d => xScale(d[1]) + margin*8)
+                            .attr('y', d => yScale(d[0]) + margin)
+                            .text(d=> '萬/坪')
+                            .style('font-size', '14px')
         }
 
+        
+        const drawHouseInfoCompare = (data) =>{
+          const avgHigh = data.dealDetail.filter(d=>d.priceSummaryType === "HigherPrice"),
+                avgLow = data.dealDetail.filter(d=>d.priceSummaryType === "LowerPrice")
+          
+          // 每坪價格      
+          $('.avgHigh').text(avgHigh[0].avgUnitPrice)
+          $('.avgLow').text(avgLow[0].avgUnitPrice)
+
+          $('#li_75').find('.cate').text('大樓')
+
+          // 跟上月比較
+          const compare = (data, DOM)=>{
+            if(data.priceVarietyPercentage > 0){
+              const text = `<span class="up">${data.priceVarietyPercentage}%</span>`
+              $(DOM).find('.compareM').append(text)
+
+            } else if (data.priceVarietyPercentage === 0 ){
+              $(DOM).find('.compareM').text('跟上月比較：持平')
+              
+            } else {
+              const text = `<span class="down">${data.priceVarietyPercentage}%</span>`
+              $(DOM).find('.compareM').append(text)
+            }
+          }
+
+          compare(avgHigh[0], '#li_75')
+          compare(avgLow[0], '#li_25')
+        }
+        
         getData(countyId)
 
     });
+
 
 
     </script>

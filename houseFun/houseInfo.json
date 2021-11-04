@@ -1,22 +1,26 @@
 {
-    "apiVersion": "1.0.0",
-    "method": "/api/v1/dealcase/priceReport.GET",
-    "status": "Success",
-    "id": "8000079c-0003-ea00-b63f-84710c7967bb",
-    "data": {
-      "url": "台北市",
-      "district": null,
-      "avgSellUnitPrice": 82.2,
-      "avgDealUnitPrice": 67.9,
-      "dealDetail": {
-        "higherPrice": {
-          "avgUnitPrice": 98.7,
-          "priceVarietyPercentage": 0.2
-        },
-        "lowerPrice": {
-          "avgUnitPrice": 42.4,
-          "priceVarietyPercentage": 0.0
-        }
+  "apiVersion": "1.0.0",
+  "method": "/api/v1/dealcase/priceReport.GET",
+  "status": "Success",
+  "id": "80000240-0802-d100-b63f-84710c7967bb",
+  "data": {
+    "county": "新北市",
+    "district": null,
+    "avgSellUnitPrice": 51.8,
+    "avgDealUnitPrice": 35.3,
+    "dealDetail": [
+      {
+        "priceSummaryType": "HigherPrice",
+        "avgUnitPrice": 53.1,
+        "priceVarietyPercentage": 0.4,
+        "url": "https://buy4-t.housefun.com.tw/region/新北市_c/住宅_use/58-48_unit_price/-50_age/od=Sequp"
+      },
+      {
+        "priceSummaryType": "LowerPrice",
+        "avgUnitPrice": 19.3,
+        "priceVarietyPercentage": -1.0,
+        "url": "https://buy4-t.housefun.com.tw/region/新北市_c/住宅_use/21-17_unit_price/-50_age/od=Sequp"
       }
-    }
+    ]
   }
+}

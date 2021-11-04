@@ -94,26 +94,21 @@
     </style>
 </head>
 <body>
-
-    <!-- 實價登錄 -->
-    <div class="ShowChartDiv1"></div> 
-
-    <!-- 銷售行情 -->
-    <div class="ShowChartDiv2"></div>
-
     <!-- chart -->
     <div class="wrap">
         <div class="dealPriceJPlot">
             <ul class="dealTab">
-                <li id="Chart1" class="dealTab_focus"><a onclick="ActionChart('1', '#chartdiv1')" href="javascript:;">實價登錄</a></li>
-                <li id="Chart2" class=""><a onclick="ActionChart('2', '#chartdiv2')" href="javascript:;">銷售行情</a></li>
+                <li id="Chart1" class="dealTab_focus"><a onclick="ActionChart('1', '2Y' , '#chartdiv1')" href="javascript:;">實價登錄</a></li>
+                <li id="Chart2" class=""><a onclick="ActionChart('2', 'm',  '#chartdiv2')" href="javascript:;">銷售行情</a></li>
+                <!-- selection 實價登錄 -->
                 <li id="ChartOption1" style="display: block;">
                     <select name="ShowChartA" onChange="getData(value, '#chartdiv1')">
-                        <option id="ShowChart2Year" value="1">兩年趨勢</option>
-                        <option id="ShowChart1Year" value="2">一年趨勢</option>
-                        <option id="ShowChart6Month" value="3">6個月趨勢</option>
+                        <option id="ShowChart2Year" value="2Y">兩年趨勢</option>
+                        <option id="ShowChart1Year" value="1Y">一年趨勢</option>
+                        <option id="ShowChart6Month" value="6M">6個月趨勢</option>
                     </select>
                 </li>
+                <!-- selection 銷售行情 -->
                 <li id="ChartOption2" style="display: none;">
                     <select name="ShowChartB" onChange="getData(value, '#chartdiv2')">
                         <option id="ShowChartMonth" value="m">月趨勢</option>
@@ -121,6 +116,8 @@
                     </select>
                 </li>
             </ul>
+
+            <!-- 實價登錄 -->
             <div id="ShowChartDiv1" class="dealPriceJPlot_block noteRelay s5" style="display: block;">
                 <!-- <iframe id="IFrameChart1" width="620" height="292" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
                 <div id="chartdiv1" style="width: 620px; height: 285px; position: relative;" class=""></div>
@@ -132,10 +129,12 @@
                     <div class="count_sheet_exp_content" style="display: none;">好房網平均實價登錄之平均成交單價數據資料及平均銷售行情之平均銷售單價數據資料，是由永慶房屋、永慶不動產、有巢氏房屋及台慶不動產四大品牌房仲公司提供。  </div>   
                  </div>
             </div>
+
+            <!-- 銷售行情 -->
             <div id="ShowChartDiv2" class="dealPriceJPlot_block noteRelay s5" style="display: none;">
                 <!-- <iframe id="IFrameChart2" width="620" height="312" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
                 <!-- <p class="dealPriceJPlot_block_p"></p> -->
-                <div id="chartdiv2" style="width: 620px; height: 285px; position: relative;" class="">
+                <div id="chartdiv2" style="width: 620px; height: 285px; position: relative;">
                     <!-- <div style="margin-top:140px;">正在為您載入圖表 請稍後...</div> -->
                 </div>
                 
@@ -146,8 +145,7 @@
                     <div class="count_sheet_exp_content" style="display: none;">好房網平均實價登錄之平均成交單價數據資料及平均銷售行情之平均銷售單價數據資料，是由永慶房屋、永慶不動產、有巢氏房屋及台慶不動產四大品牌房仲公司提供。  </div>   
                 </div>    
             </div>
-            </div>
-
+        </div>
     </div>
 
     
@@ -156,8 +154,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>        
     // tab 切換
-    const ActionChart = (no, DOM) => {
-        getData(no, DOM)
+    const ActionChart = (no, val, DOM) => {
+        getData(val, DOM)
         $('li[id^=Chart]').removeClass('dealTab_focus');
         $('[id^=ShowChartDiv]').hide();
         $('[id^=ChartOption]').hide();
@@ -185,27 +183,32 @@
 
     // 取資料
     const getData = async (val, DOM) => {
+        let dateRangeType = 1; // 周或月趨勢
+        let periodType = 'month'
         // 實價登錄選擇時間範圍
         switch(val){
-            case '1' : // 兩年
+            case '2Y' : // 兩年
             StartDate =  [currentYear - 2, currentMonth, currentDate].join('-')
             break;
-            case '2' : // 一年
+            case '1Y' : // 一年
             StartDate =  [currentYear - 1, currentMonth, currentDate].join('-')
             break;
-            case '3' : // 六個月
+            case '6M' : // 六個月
             StartDate =  [currentYear, currentMonth - 6, currentDate].join('-')
             break;
             case 'm' : // 月趨勢
             StartDate =  [currentYear -1, currentMonth, currentDate].join('-')
+            dateRangeType = 1
             break;
             case 'w' : // 週趨勢
             StartDate =  [currentYear -1, currentMonth, currentDate].join('-')
+            dateRangeType = 2
+            periodType = 'week'
             break;
         }
         // API URL
         let type = ''
-        val === '1' || '2' || '3'
+        val === '2Y' || '1Y' || '6M'
         ? type = '1'
         : type = '2'
 
@@ -213,22 +216,27 @@
         let dataGet;
         DOM === '#chartdiv1'
         ? dataGet = await d3.json('./houseFunChart2.json')
-        : dataGet = await d3.json('./houseFunChart2_week.json')
+        : dataGet = await d3.json(`./houseFunChart2_${periodType}_district.json`)
+
         let data = dataGet.data
         drawBarChart(data, val, DOM)
 
+        // let dataGet, url;
+        // DOM === '#chartdiv1'
+        // ? url = `/api/v1/dealcase/priceTrendSummary?PriceTrendType=${type}&StartDate=${StartDate}&EndDate=${endDate}&CountyId=${countyId}&DistrictId=${districtId}`
+        // : url = `/api/v1/dealcase/priceTrendSummary?PriceTrendType=${type}&PriceTrendDateRangeType=${dateRangeType}&CountyId=${countyId}&DistrictId=${districtId}`
+        // dataGet = await d3.json(url)
+        // let data = dataGet.data
+        // drawBarChart(data, val, DOM)
 
-    //   dataGet = await d3.json(`/api/v1/dealcase/priceTrendSummary?PriceTrendType=${type}&StartDate=${StartDate}&EndDate=${endDate}&CountyId=${countryId}&DistrictId=${districtId}`)
-    //   data = dataGet.data
-    //   drawBarChart(data, '.chartBlock')
+
     };
     // API: http://price2-t.housefun.com.tw/api/v1/dealcase/priceTrendSummary?PriceTrendType=1&StartDate=2019-10-01&EndDate=2021-10-01&CountyId=0&DistrictId=2
 
 
     // 繪製圖表
     const drawBarChart = (data, tabOption, DOM) => {
-        console.log(tabOption);
-        console.log(data);
+        // console.log(data);
         // 刪除原本的svg.charts
         d3.select(`${DOM} svg`).remove();
 
@@ -242,15 +250,15 @@
             rotateDeg = -45,
             dx = -25
 
-            if( tabOption === '1'){
+            if( tabOption === '2Y'){
                 marginY = 45
                 ticksNumber = 24
                 rotateDeg = -45
-            } else if (tabOption === '2' || tabOption === 'm'){
+            } else if (tabOption === '1Y' || tabOption === 'm'){
                 marginY = 35
                 ticksNumber = 12
                 rotateDeg = -25
-            } else if (tabOption === '3') {
+            } else if (tabOption === '6M') {
                 marginY = 20
                 ticksNumber = 6
                 rotateDeg = 0
@@ -283,7 +291,10 @@
         
         // 整理資料
         const xData = data.map(d=> [d.year, d.month, d.week].filter(d => d !== null).join('-'))
-        const groups = ['avgUnitPrice25', 'avgUnitPrice50', 'avgUnitPrice75']
+        // let groups =  tabOption === 'm' || tabOption === 'w'
+        //             ? ['avgUnitPrice50']
+        //             : ['avgUnitPrice25', 'avgUnitPrice50', 'avgUnitPrice75'];
+        let groups = ['avgUnitPrice25', 'avgUnitPrice50', 'avgUnitPrice75'];
         const dataGroups = groups.map(groupName => {
             return {
                 name: groupName,
@@ -292,15 +303,17 @@
                 })
             }
         })
-
-        console.log(dataGroups)
-        
+        // console.log(dataGroups)
 
         // X 軸與比例尺
         const xScale = d3.scaleTime()
                         .domain(d3.extent(xData, d => parseTime(d)))
                         .range([marginX*2, svgWidth - marginX])
-                        .nice()
+                        // .nice()
+
+            tabOption === 'm'
+            ? xScale.nice()
+            : xScale
         
         let xAxis;
         if(tabOption === 'w'){
@@ -311,8 +324,7 @@
             xAxis = d3.axisBottom(xScale)
                     .tickFormat(d3.timeFormat("%Y-%m"))
                     .ticks(ticksNumber)
-        }
-                        
+        }         
         
         // 設定棋盤線段scale
         const xAxisTicks = d3.axisBottom(xScale)
@@ -427,7 +439,17 @@
             }
             })
 
-            tooltip.style("opacity", 1)
+            if(tabOption === 'w'){
+                tooltip.style("opacity", 1)
+                    .style('left', (pt[0]+20) + 'px')
+                    .style('top', (pt[1]) + 'px')
+                    .html(`<h3>${d.target.__data__.time.split('-')[0]}年${d.target.__data__.time.split('-')[1]}月${d.target.__data__.time.split('-')[2]}週</h3>
+                    <p><span class="color_h">最高單價平均：</span> ${groupValues[2].value} 萬/坪</p>
+                    <p><span class="color_m">住宅單價平均：</span> ${groupValues[1].value} 萬/坪</p>
+                    <p><span class="color_l">最低單價平均：</span> ${groupValues[0].value} 萬/坪</p>
+                    `)
+            } else {
+                tooltip.style("opacity", 1)
                     .style('left', (pt[0]+20) + 'px')
                     .style('top', (pt[1]) + 'px')
                     .html(`<h3>${d.target.__data__.time.split('-')[0]}年${d.target.__data__.time.split('-')[1]}月</h3>
@@ -435,6 +457,8 @@
                     <p><span class="color_m">住宅單價平均：</span> ${groupValues[1].value} 萬/坪</p>
                     <p><span class="color_l">最低單價平均：</span> ${groupValues[0].value} 萬/坪</p>
                     `)
+
+            }
         }
 
         function dotsMouseleave(d){
@@ -473,7 +497,7 @@
 
     };
 
-    getData('1', '#chartdiv1');
+    getData('2Y', '#chartdiv1');
 
     </script>
 </body>

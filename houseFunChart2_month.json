@@ -1,0 +1,4200 @@
+{
+    "apiVersion": "1.0.0",
+    "method": "/api/v1/dealcase/priceTrendSummary.GET",
+    "status": "Success",
+    "id": "800000a7-1402-c200-b63f-84710c7967bb",
+    "data": [
+      {
+        "avgUnitPrice25": 42.4,
+        "avgUnitPrice50": 70.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2011,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 42.4,
+        "avgUnitPrice50": 70.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2011,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 42.4,
+        "avgUnitPrice50": 70.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2011,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 42.4,
+        "avgUnitPrice50": 70.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2011,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 42.4,
+        "avgUnitPrice50": 70.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2011,
+        "month": 11,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 41.3,
+        "avgUnitPrice50": 68.2,
+        "avgUnitPrice75": 102.6,
+        "year": 2011,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 41.3,
+        "avgUnitPrice50": 68.2,
+        "avgUnitPrice75": 102.6,
+        "year": 2011,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 41.3,
+        "avgUnitPrice50": 68.2,
+        "avgUnitPrice75": 102.6,
+        "year": 2011,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 41.3,
+        "avgUnitPrice50": 68.2,
+        "avgUnitPrice75": 102.6,
+        "year": 2011,
+        "month": 12,
+        "week": 53
+      },
+      {
+        "avgUnitPrice25": 41.8,
+        "avgUnitPrice50": 68.9,
+        "avgUnitPrice75": 103.7,
+        "year": 2012,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 41.8,
+        "avgUnitPrice50": 68.9,
+        "avgUnitPrice75": 103.7,
+        "year": 2012,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 41.8,
+        "avgUnitPrice50": 68.9,
+        "avgUnitPrice75": 103.7,
+        "year": 2012,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 41.8,
+        "avgUnitPrice50": 68.9,
+        "avgUnitPrice75": 103.7,
+        "year": 2012,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 41.7,
+        "avgUnitPrice50": 68.8,
+        "avgUnitPrice75": 103.5,
+        "year": 2012,
+        "month": 2,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 41.7,
+        "avgUnitPrice50": 68.8,
+        "avgUnitPrice75": 103.5,
+        "year": 2012,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 41.7,
+        "avgUnitPrice50": 68.8,
+        "avgUnitPrice75": 103.5,
+        "year": 2012,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 41.7,
+        "avgUnitPrice50": 68.8,
+        "avgUnitPrice75": 103.5,
+        "year": 2012,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 41.7,
+        "avgUnitPrice50": 68.8,
+        "avgUnitPrice75": 103.5,
+        "year": 2012,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 42.1,
+        "avgUnitPrice50": 69.5,
+        "avgUnitPrice75": 104.6,
+        "year": 2012,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 42.1,
+        "avgUnitPrice50": 69.5,
+        "avgUnitPrice75": 104.6,
+        "year": 2012,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 42.1,
+        "avgUnitPrice50": 69.5,
+        "avgUnitPrice75": 104.6,
+        "year": 2012,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 42.1,
+        "avgUnitPrice50": 69.5,
+        "avgUnitPrice75": 104.6,
+        "year": 2012,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 42.8,
+        "avgUnitPrice50": 70.6,
+        "avgUnitPrice75": 106.3,
+        "year": 2012,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 42.8,
+        "avgUnitPrice50": 70.6,
+        "avgUnitPrice75": 106.3,
+        "year": 2012,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 42.8,
+        "avgUnitPrice50": 70.6,
+        "avgUnitPrice75": 106.3,
+        "year": 2012,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 42.8,
+        "avgUnitPrice50": 70.6,
+        "avgUnitPrice75": 106.3,
+        "year": 2012,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 42.2,
+        "avgUnitPrice50": 69.6,
+        "avgUnitPrice75": 104.7,
+        "year": 2012,
+        "month": 5,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 42.2,
+        "avgUnitPrice50": 69.6,
+        "avgUnitPrice75": 104.7,
+        "year": 2012,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 42.2,
+        "avgUnitPrice50": 69.6,
+        "avgUnitPrice75": 104.7,
+        "year": 2012,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 42.5,
+        "avgUnitPrice50": 70.1,
+        "avgUnitPrice75": 105.5,
+        "year": 2012,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 42.8,
+        "avgUnitPrice50": 70.4,
+        "avgUnitPrice75": 105.7,
+        "year": 2012,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 42.8,
+        "avgUnitPrice50": 70.4,
+        "avgUnitPrice75": 105.9,
+        "year": 2012,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 43.0,
+        "avgUnitPrice50": 70.5,
+        "avgUnitPrice75": 105.8,
+        "year": 2012,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 42.9,
+        "avgUnitPrice50": 70.5,
+        "avgUnitPrice75": 105.8,
+        "year": 2012,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 42.9,
+        "avgUnitPrice50": 70.5,
+        "avgUnitPrice75": 105.8,
+        "year": 2012,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 43.1,
+        "avgUnitPrice50": 70.8,
+        "avgUnitPrice75": 106.3,
+        "year": 2012,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 43.3,
+        "avgUnitPrice50": 71.0,
+        "avgUnitPrice75": 106.5,
+        "year": 2012,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 43.5,
+        "avgUnitPrice50": 71.2,
+        "avgUnitPrice75": 106.8,
+        "year": 2012,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 43.6,
+        "avgUnitPrice50": 71.1,
+        "avgUnitPrice75": 106.7,
+        "year": 2012,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 43.5,
+        "avgUnitPrice50": 71.2,
+        "avgUnitPrice75": 106.8,
+        "year": 2012,
+        "month": 8,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 43.6,
+        "avgUnitPrice50": 71.2,
+        "avgUnitPrice75": 107.0,
+        "year": 2012,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 43.6,
+        "avgUnitPrice50": 71.3,
+        "avgUnitPrice75": 107.4,
+        "year": 2012,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 43.9,
+        "avgUnitPrice50": 71.4,
+        "avgUnitPrice75": 107.0,
+        "year": 2012,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 44.0,
+        "avgUnitPrice50": 71.7,
+        "avgUnitPrice75": 107.7,
+        "year": 2012,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 44.0,
+        "avgUnitPrice50": 71.6,
+        "avgUnitPrice75": 107.7,
+        "year": 2012,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 44.1,
+        "avgUnitPrice50": 71.7,
+        "avgUnitPrice75": 107.9,
+        "year": 2012,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 44.1,
+        "avgUnitPrice50": 71.6,
+        "avgUnitPrice75": 107.4,
+        "year": 2012,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 44.2,
+        "avgUnitPrice50": 71.9,
+        "avgUnitPrice75": 108.0,
+        "year": 2012,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 44.3,
+        "avgUnitPrice50": 71.9,
+        "avgUnitPrice75": 107.9,
+        "year": 2012,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 44.3,
+        "avgUnitPrice50": 71.9,
+        "avgUnitPrice75": 108.0,
+        "year": 2012,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 44.5,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 108.2,
+        "year": 2012,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 44.5,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 108.3,
+        "year": 2012,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 44.8,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 108.7,
+        "year": 2012,
+        "month": 11,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 44.9,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 108.4,
+        "year": 2012,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 44.9,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 108.1,
+        "year": 2012,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 44.8,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 108.4,
+        "year": 2012,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 45.0,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 108.4,
+        "year": 2012,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 45.1,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 108.3,
+        "year": 2012,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 44.9,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 108.3,
+        "year": 2012,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 44.8,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 108.0,
+        "year": 2012,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 44.9,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 107.9,
+        "year": 2012,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 44.7,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 107.9,
+        "year": 2013,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 44.9,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 108.1,
+        "year": 2013,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 44.9,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 107.8,
+        "year": 2013,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 44.9,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 107.9,
+        "year": 2013,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 45.0,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 108.2,
+        "year": 2013,
+        "month": 1,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 45.2,
+        "avgUnitPrice50": 72.9,
+        "avgUnitPrice75": 108.9,
+        "year": 2013,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 45.2,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 109.0,
+        "year": 2013,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 45.1,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 108.9,
+        "year": 2013,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 45.3,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 109.1,
+        "year": 2013,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 45.4,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 109.2,
+        "year": 2013,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 45.5,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 109.7,
+        "year": 2013,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 45.6,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 109.8,
+        "year": 2013,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 45.5,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 110.3,
+        "year": 2013,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 45.4,
+        "avgUnitPrice50": 73.8,
+        "avgUnitPrice75": 110.5,
+        "year": 2013,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 45.7,
+        "avgUnitPrice50": 73.9,
+        "avgUnitPrice75": 110.5,
+        "year": 2013,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 46.0,
+        "avgUnitPrice50": 74.4,
+        "avgUnitPrice75": 111.2,
+        "year": 2013,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 74.7,
+        "avgUnitPrice75": 111.9,
+        "year": 2013,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 74.6,
+        "avgUnitPrice75": 111.8,
+        "year": 2013,
+        "month": 5,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 74.9,
+        "avgUnitPrice75": 112.1,
+        "year": 2013,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 112.1,
+        "year": 2013,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 112.6,
+        "year": 2013,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 75.6,
+        "avgUnitPrice75": 113.1,
+        "year": 2013,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 75.5,
+        "avgUnitPrice75": 112.9,
+        "year": 2013,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 76.0,
+        "avgUnitPrice75": 113.5,
+        "year": 2013,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 76.3,
+        "avgUnitPrice75": 114.1,
+        "year": 2013,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 76.5,
+        "avgUnitPrice75": 114.8,
+        "year": 2013,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 76.6,
+        "avgUnitPrice75": 114.8,
+        "year": 2013,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 76.7,
+        "avgUnitPrice75": 114.8,
+        "year": 2013,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 76.7,
+        "avgUnitPrice75": 115.0,
+        "year": 2013,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 77.3,
+        "avgUnitPrice75": 115.7,
+        "year": 2013,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 77.2,
+        "avgUnitPrice75": 115.8,
+        "year": 2013,
+        "month": 8,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 77.4,
+        "avgUnitPrice75": 116.0,
+        "year": 2013,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 77.4,
+        "avgUnitPrice75": 116.3,
+        "year": 2013,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 77.4,
+        "avgUnitPrice75": 116.0,
+        "year": 2013,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 77.6,
+        "avgUnitPrice75": 116.6,
+        "year": 2013,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 77.4,
+        "avgUnitPrice75": 115.9,
+        "year": 2013,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 77.4,
+        "avgUnitPrice75": 115.9,
+        "year": 2013,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 77.8,
+        "avgUnitPrice75": 116.2,
+        "year": 2013,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 77.8,
+        "avgUnitPrice75": 116.2,
+        "year": 2013,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 77.8,
+        "avgUnitPrice75": 116.0,
+        "year": 2013,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 78.2,
+        "avgUnitPrice75": 117.0,
+        "year": 2013,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 117.2,
+        "year": 2013,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 117.2,
+        "year": 2013,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 78.5,
+        "avgUnitPrice75": 117.4,
+        "year": 2013,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 48.8,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 117.3,
+        "year": 2013,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 49.0,
+        "avgUnitPrice50": 78.6,
+        "avgUnitPrice75": 117.3,
+        "year": 2013,
+        "month": 10,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 49.3,
+        "avgUnitPrice50": 77.8,
+        "avgUnitPrice75": 115.6,
+        "year": 2013,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 49.1,
+        "avgUnitPrice50": 78.2,
+        "avgUnitPrice75": 116.6,
+        "year": 2013,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 49.1,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 117.0,
+        "year": 2013,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 49.2,
+        "avgUnitPrice50": 78.5,
+        "avgUnitPrice75": 117.0,
+        "year": 2013,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 49.4,
+        "avgUnitPrice50": 78.6,
+        "avgUnitPrice75": 117.1,
+        "year": 2013,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 49.4,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 116.3,
+        "year": 2013,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 49.4,
+        "avgUnitPrice50": 78.5,
+        "avgUnitPrice75": 116.4,
+        "year": 2013,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 49.7,
+        "avgUnitPrice50": 78.6,
+        "avgUnitPrice75": 116.2,
+        "year": 2013,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 49.8,
+        "avgUnitPrice50": 78.8,
+        "avgUnitPrice75": 117.0,
+        "year": 2014,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 49.8,
+        "avgUnitPrice50": 78.9,
+        "avgUnitPrice75": 117.2,
+        "year": 2014,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 49.9,
+        "avgUnitPrice50": 79.1,
+        "avgUnitPrice75": 117.7,
+        "year": 2014,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 50.0,
+        "avgUnitPrice50": 79.3,
+        "avgUnitPrice75": 118.0,
+        "year": 2014,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 49.9,
+        "avgUnitPrice50": 79.2,
+        "avgUnitPrice75": 118.2,
+        "year": 2014,
+        "month": 1,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 49.7,
+        "avgUnitPrice50": 79.3,
+        "avgUnitPrice75": 118.6,
+        "year": 2014,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 49.8,
+        "avgUnitPrice50": 79.2,
+        "avgUnitPrice75": 118.3,
+        "year": 2014,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 50.1,
+        "avgUnitPrice50": 79.3,
+        "avgUnitPrice75": 118.0,
+        "year": 2014,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 50.2,
+        "avgUnitPrice50": 79.4,
+        "avgUnitPrice75": 117.7,
+        "year": 2014,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 79.5,
+        "avgUnitPrice75": 117.4,
+        "year": 2014,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 79.7,
+        "avgUnitPrice75": 117.7,
+        "year": 2014,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 50.5,
+        "avgUnitPrice50": 79.7,
+        "avgUnitPrice75": 117.8,
+        "year": 2014,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 79.7,
+        "avgUnitPrice75": 117.6,
+        "year": 2014,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 80.1,
+        "avgUnitPrice75": 118.4,
+        "year": 2014,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 79.9,
+        "avgUnitPrice75": 117.9,
+        "year": 2014,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 79.9,
+        "avgUnitPrice75": 118.0,
+        "year": 2014,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.9,
+        "avgUnitPrice75": 117.9,
+        "year": 2014,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 51.0,
+        "avgUnitPrice50": 80.2,
+        "avgUnitPrice75": 118.1,
+        "year": 2014,
+        "month": 5,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 51.0,
+        "avgUnitPrice50": 80.3,
+        "avgUnitPrice75": 118.3,
+        "year": 2014,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 80.1,
+        "avgUnitPrice75": 118.0,
+        "year": 2014,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 80.3,
+        "avgUnitPrice75": 118.7,
+        "year": 2014,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 80.2,
+        "avgUnitPrice75": 118.4,
+        "year": 2014,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 80.3,
+        "avgUnitPrice75": 118.6,
+        "year": 2014,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 80.2,
+        "avgUnitPrice75": 118.3,
+        "year": 2014,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 80.3,
+        "avgUnitPrice75": 118.8,
+        "year": 2014,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 80.1,
+        "avgUnitPrice75": 118.3,
+        "year": 2014,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 80.1,
+        "avgUnitPrice75": 118.3,
+        "year": 2014,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 80.1,
+        "avgUnitPrice75": 118.3,
+        "year": 2014,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 80.4,
+        "avgUnitPrice75": 118.6,
+        "year": 2014,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 80.3,
+        "avgUnitPrice75": 118.9,
+        "year": 2014,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 50.5,
+        "avgUnitPrice50": 80.0,
+        "avgUnitPrice75": 118.4,
+        "year": 2014,
+        "month": 7,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 50.5,
+        "avgUnitPrice50": 80.0,
+        "avgUnitPrice75": 118.3,
+        "year": 2014,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 80.0,
+        "avgUnitPrice75": 118.2,
+        "year": 2014,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 50.5,
+        "avgUnitPrice50": 79.9,
+        "avgUnitPrice75": 118.4,
+        "year": 2014,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 80.1,
+        "avgUnitPrice75": 118.5,
+        "year": 2014,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.8,
+        "avgUnitPrice75": 117.9,
+        "year": 2014,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 51.0,
+        "avgUnitPrice50": 79.9,
+        "avgUnitPrice75": 117.8,
+        "year": 2014,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.9,
+        "avgUnitPrice75": 117.8,
+        "year": 2014,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 79.8,
+        "avgUnitPrice75": 117.8,
+        "year": 2014,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.9,
+        "avgUnitPrice75": 118.1,
+        "year": 2014,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 51.0,
+        "avgUnitPrice50": 79.8,
+        "avgUnitPrice75": 117.5,
+        "year": 2014,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 79.8,
+        "avgUnitPrice75": 117.7,
+        "year": 2014,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 117.3,
+        "year": 2014,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 117.2,
+        "year": 2014,
+        "month": 10,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.7,
+        "avgUnitPrice75": 117.3,
+        "year": 2014,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 79.7,
+        "avgUnitPrice75": 117.3,
+        "year": 2014,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 117.1,
+        "year": 2014,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.7,
+        "avgUnitPrice75": 117.3,
+        "year": 2014,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 117.1,
+        "year": 2014,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 51.0,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 117.0,
+        "year": 2014,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 117.2,
+        "year": 2014,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 117.3,
+        "year": 2014,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.8,
+        "avgUnitPrice75": 117.3,
+        "year": 2015,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.4,
+        "avgUnitPrice75": 116.4,
+        "year": 2015,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 79.4,
+        "avgUnitPrice75": 116.7,
+        "year": 2015,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 50.9,
+        "avgUnitPrice50": 79.6,
+        "avgUnitPrice75": 116.9,
+        "year": 2015,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.5,
+        "avgUnitPrice75": 116.7,
+        "year": 2015,
+        "month": 1,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 50.4,
+        "avgUnitPrice50": 79.2,
+        "avgUnitPrice75": 116.2,
+        "year": 2015,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 50.2,
+        "avgUnitPrice50": 79.1,
+        "avgUnitPrice75": 116.1,
+        "year": 2015,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 50.6,
+        "avgUnitPrice50": 79.2,
+        "avgUnitPrice75": 115.9,
+        "year": 2015,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.2,
+        "avgUnitPrice75": 115.9,
+        "year": 2015,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 50.8,
+        "avgUnitPrice50": 79.1,
+        "avgUnitPrice75": 115.5,
+        "year": 2015,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.1,
+        "avgUnitPrice75": 115.4,
+        "year": 2015,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 50.7,
+        "avgUnitPrice50": 79.1,
+        "avgUnitPrice75": 115.3,
+        "year": 2015,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 50.2,
+        "avgUnitPrice50": 79.0,
+        "avgUnitPrice75": 115.2,
+        "year": 2015,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 49.5,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 114.6,
+        "year": 2015,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 49.3,
+        "avgUnitPrice50": 78.2,
+        "avgUnitPrice75": 114.1,
+        "year": 2015,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 49.8,
+        "avgUnitPrice50": 78.2,
+        "avgUnitPrice75": 113.7,
+        "year": 2015,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 50.0,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 113.6,
+        "year": 2015,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 50.2,
+        "avgUnitPrice50": 78.6,
+        "avgUnitPrice75": 113.8,
+        "year": 2015,
+        "month": 4,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 50.1,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 113.5,
+        "year": 2015,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 50.1,
+        "avgUnitPrice50": 78.6,
+        "avgUnitPrice75": 113.9,
+        "year": 2015,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 50.2,
+        "avgUnitPrice50": 78.7,
+        "avgUnitPrice75": 114.0,
+        "year": 2015,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 50.1,
+        "avgUnitPrice50": 78.5,
+        "avgUnitPrice75": 113.7,
+        "year": 2015,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 50.0,
+        "avgUnitPrice50": 78.6,
+        "avgUnitPrice75": 114.0,
+        "year": 2015,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 49.7,
+        "avgUnitPrice50": 78.2,
+        "avgUnitPrice75": 113.6,
+        "year": 2015,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 49.7,
+        "avgUnitPrice50": 78.2,
+        "avgUnitPrice75": 113.5,
+        "year": 2015,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 49.8,
+        "avgUnitPrice50": 78.4,
+        "avgUnitPrice75": 113.8,
+        "year": 2015,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 49.6,
+        "avgUnitPrice50": 78.1,
+        "avgUnitPrice75": 113.7,
+        "year": 2015,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 50.0,
+        "avgUnitPrice50": 78.1,
+        "avgUnitPrice75": 113.2,
+        "year": 2015,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 49.2,
+        "avgUnitPrice50": 77.7,
+        "avgUnitPrice75": 113.0,
+        "year": 2015,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 48.9,
+        "avgUnitPrice50": 77.5,
+        "avgUnitPrice75": 112.8,
+        "year": 2015,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 49.0,
+        "avgUnitPrice50": 77.7,
+        "avgUnitPrice75": 113.2,
+        "year": 2015,
+        "month": 7,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 50.1,
+        "avgUnitPrice50": 78.0,
+        "avgUnitPrice75": 112.6,
+        "year": 2015,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 49.9,
+        "avgUnitPrice50": 77.8,
+        "avgUnitPrice75": 112.4,
+        "year": 2015,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 49.5,
+        "avgUnitPrice50": 77.7,
+        "avgUnitPrice75": 112.6,
+        "year": 2015,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 48.9,
+        "avgUnitPrice50": 77.4,
+        "avgUnitPrice75": 112.3,
+        "year": 2015,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 77.3,
+        "avgUnitPrice75": 112.2,
+        "year": 2015,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 77.1,
+        "avgUnitPrice75": 111.8,
+        "year": 2015,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 76.9,
+        "avgUnitPrice75": 111.5,
+        "year": 2015,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 76.8,
+        "avgUnitPrice75": 111.2,
+        "year": 2015,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 76.7,
+        "avgUnitPrice75": 111.1,
+        "year": 2015,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 76.6,
+        "avgUnitPrice75": 111.1,
+        "year": 2015,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 76.4,
+        "avgUnitPrice75": 110.8,
+        "year": 2015,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 76.7,
+        "avgUnitPrice75": 111.0,
+        "year": 2015,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 76.6,
+        "avgUnitPrice75": 110.9,
+        "year": 2015,
+        "month": 10,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 76.4,
+        "avgUnitPrice75": 110.5,
+        "year": 2015,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 76.2,
+        "avgUnitPrice75": 109.9,
+        "year": 2015,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 76.3,
+        "avgUnitPrice75": 110.0,
+        "year": 2015,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 76.3,
+        "avgUnitPrice75": 109.9,
+        "year": 2015,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 76.0,
+        "avgUnitPrice75": 109.1,
+        "year": 2015,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 75.9,
+        "avgUnitPrice75": 109.0,
+        "year": 2015,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 76.0,
+        "avgUnitPrice75": 109.2,
+        "year": 2015,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 75.9,
+        "avgUnitPrice75": 109.1,
+        "year": 2015,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 75.9,
+        "avgUnitPrice75": 109.0,
+        "year": 2015,
+        "month": 12,
+        "week": 53
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 108.1,
+        "year": 2016,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 107.9,
+        "year": 2016,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 108.1,
+        "year": 2016,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 75.5,
+        "avgUnitPrice75": 108.0,
+        "year": 2016,
+        "month": 1,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 75.7,
+        "avgUnitPrice75": 108.4,
+        "year": 2016,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 75.7,
+        "avgUnitPrice75": 108.2,
+        "year": 2016,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 48.8,
+        "avgUnitPrice50": 75.8,
+        "avgUnitPrice75": 108.4,
+        "year": 2016,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 75.7,
+        "avgUnitPrice75": 108.3,
+        "year": 2016,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 75.7,
+        "avgUnitPrice75": 108.1,
+        "year": 2016,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 75.7,
+        "avgUnitPrice75": 108.2,
+        "year": 2016,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 75.7,
+        "avgUnitPrice75": 108.2,
+        "year": 2016,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 75.5,
+        "avgUnitPrice75": 108.1,
+        "year": 2016,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 108.0,
+        "year": 2016,
+        "month": 3,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 107.2,
+        "year": 2016,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 75.4,
+        "avgUnitPrice75": 107.8,
+        "year": 2016,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 75.2,
+        "avgUnitPrice75": 107.7,
+        "year": 2016,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 75.2,
+        "avgUnitPrice75": 107.8,
+        "year": 2016,
+        "month": 4,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 107.7,
+        "year": 2016,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 107.9,
+        "year": 2016,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 107.9,
+        "year": 2016,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 107.8,
+        "year": 2016,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 75.5,
+        "avgUnitPrice75": 108.1,
+        "year": 2016,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 75.5,
+        "avgUnitPrice75": 108.0,
+        "year": 2016,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 49.0,
+        "avgUnitPrice50": 75.7,
+        "avgUnitPrice75": 108.3,
+        "year": 2016,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 48.9,
+        "avgUnitPrice50": 75.5,
+        "avgUnitPrice75": 107.9,
+        "year": 2016,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 75.2,
+        "avgUnitPrice75": 107.5,
+        "year": 2016,
+        "month": 6,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 107.4,
+        "year": 2016,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.4,
+        "year": 2016,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.4,
+        "year": 2016,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 107.5,
+        "year": 2016,
+        "month": 7,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 48.7,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.2,
+        "year": 2016,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 48.8,
+        "avgUnitPrice50": 75.2,
+        "avgUnitPrice75": 107.8,
+        "year": 2016,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.3,
+        "year": 2016,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.4,
+        "year": 2016,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 74.8,
+        "avgUnitPrice75": 107.3,
+        "year": 2016,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.6,
+        "year": 2016,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 74.9,
+        "avgUnitPrice75": 107.4,
+        "year": 2016,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 74.8,
+        "avgUnitPrice75": 107.4,
+        "year": 2016,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 74.8,
+        "avgUnitPrice75": 107.4,
+        "year": 2016,
+        "month": 9,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 74.9,
+        "avgUnitPrice75": 107.3,
+        "year": 2016,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 74.8,
+        "avgUnitPrice75": 107.0,
+        "year": 2016,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.3,
+        "year": 2016,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 107.2,
+        "year": 2016,
+        "month": 10,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 74.9,
+        "avgUnitPrice75": 107.1,
+        "year": 2016,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 48.5,
+        "avgUnitPrice50": 74.8,
+        "avgUnitPrice75": 107.0,
+        "year": 2016,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 48.6,
+        "avgUnitPrice50": 74.9,
+        "avgUnitPrice75": 107.1,
+        "year": 2016,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 74.8,
+        "avgUnitPrice75": 107.1,
+        "year": 2016,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 74.5,
+        "avgUnitPrice75": 106.9,
+        "year": 2016,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 74.6,
+        "avgUnitPrice75": 106.9,
+        "year": 2016,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 74.1,
+        "avgUnitPrice75": 106.4,
+        "year": 2016,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 74.1,
+        "avgUnitPrice75": 106.4,
+        "year": 2016,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 74.0,
+        "avgUnitPrice75": 106.3,
+        "year": 2016,
+        "month": 12,
+        "week": 53
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 105.4,
+        "year": 2017,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.4,
+        "year": 2017,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.4,
+        "year": 2017,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.5,
+        "year": 2017,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.7,
+        "year": 2017,
+        "month": 2,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 47.9,
+        "avgUnitPrice50": 73.6,
+        "avgUnitPrice75": 106.1,
+        "year": 2017,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.0,
+        "year": 2017,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 105.8,
+        "year": 2017,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 3,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.7,
+        "year": 2017,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.6,
+        "year": 2017,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.6,
+        "year": 2017,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.8,
+        "year": 2017,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 72.9,
+        "avgUnitPrice75": 105.5,
+        "year": 2017,
+        "month": 5,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 72.9,
+        "avgUnitPrice75": 105.4,
+        "year": 2017,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.5,
+        "year": 2017,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.7,
+        "year": 2017,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 106.1,
+        "year": 2017,
+        "month": 6,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.3,
+        "year": 2017,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.7,
+        "year": 2017,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 105.7,
+        "year": 2017,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.6,
+        "year": 2017,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.5,
+        "year": 2017,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.2,
+        "year": 2017,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 105.5,
+        "year": 2017,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 105.2,
+        "year": 2017,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 106.0,
+        "year": 2017,
+        "month": 8,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 47.9,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 105.7,
+        "year": 2017,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 105.8,
+        "year": 2017,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 106.5,
+        "year": 2017,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 48.2,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 106.3,
+        "year": 2017,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 48.1,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 106.3,
+        "year": 2017,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.6,
+        "avgUnitPrice75": 106.2,
+        "year": 2017,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.6,
+        "avgUnitPrice75": 105.8,
+        "year": 2017,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.5,
+        "year": 2017,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.1,
+        "year": 2017,
+        "month": 11,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.2,
+        "year": 2017,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.9,
+        "year": 2017,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.8,
+        "year": 2017,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.6,
+        "year": 2017,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2017,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 47.9,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.2,
+        "year": 2017,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 104.9,
+        "year": 2017,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 48.0,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.2,
+        "year": 2018,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 47.9,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.3,
+        "year": 2018,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 47.9,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.3,
+        "year": 2018,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.2,
+        "year": 2018,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.5,
+        "year": 2018,
+        "month": 2,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.5,
+        "year": 2018,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 104.7,
+        "year": 2018,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 72.9,
+        "avgUnitPrice75": 104.9,
+        "year": 2018,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 47.7,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 104.9,
+        "year": 2018,
+        "month": 3,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 104.8,
+        "year": 2018,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.8,
+        "year": 2018,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 105.0,
+        "year": 2018,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.4,
+        "year": 2018,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.6,
+        "year": 2018,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.5,
+        "year": 2018,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.4,
+        "year": 2018,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2018,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.6,
+        "year": 2018,
+        "month": 5,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.5,
+        "year": 2018,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.6,
+        "year": 2018,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 72.9,
+        "avgUnitPrice75": 105.2,
+        "year": 2018,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.5,
+        "year": 2018,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 106.0,
+        "year": 2018,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.2,
+        "year": 2018,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 106.2,
+        "year": 2018,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 105.8,
+        "year": 2018,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 105.5,
+        "year": 2018,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.4,
+        "year": 2018,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.4,
+        "year": 2018,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.4,
+        "year": 2018,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 105.7,
+        "year": 2018,
+        "month": 8,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.5,
+        "year": 2018,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 105.1,
+        "year": 2018,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 105.1,
+        "year": 2018,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 47.2,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.9,
+        "year": 2018,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 72.6,
+        "avgUnitPrice75": 104.6,
+        "year": 2018,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.6,
+        "avgUnitPrice75": 104.6,
+        "year": 2018,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.5,
+        "year": 2018,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.5,
+        "year": 2018,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.6,
+        "avgUnitPrice75": 104.4,
+        "year": 2018,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.3,
+        "year": 2018,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.2,
+        "year": 2018,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.5,
+        "year": 2018,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.5,
+        "year": 2018,
+        "month": 11,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.4,
+        "year": 2018,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 47.0,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.3,
+        "year": 2018,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.0,
+        "year": 2018,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.3,
+        "year": 2018,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.3,
+        "year": 2018,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 104.1,
+        "year": 2018,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.0,
+        "avgUnitPrice75": 103.8,
+        "year": 2018,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 71.9,
+        "avgUnitPrice75": 103.7,
+        "year": 2018,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 71.7,
+        "avgUnitPrice75": 103.4,
+        "year": 2019,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 71.7,
+        "avgUnitPrice75": 103.7,
+        "year": 2019,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 71.9,
+        "avgUnitPrice75": 103.7,
+        "year": 2019,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 71.8,
+        "avgUnitPrice75": 103.4,
+        "year": 2019,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.0,
+        "avgUnitPrice75": 103.6,
+        "year": 2019,
+        "month": 1,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.0,
+        "year": 2019,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.9,
+        "year": 2019,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.0,
+        "year": 2019,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.3,
+        "year": 2019,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 103.9,
+        "year": 2019,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 103.8,
+        "year": 2019,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 103.9,
+        "year": 2019,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.8,
+        "year": 2019,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.7,
+        "year": 2019,
+        "month": 5,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.9,
+        "year": 2019,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.8,
+        "year": 2019,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.0,
+        "year": 2019,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 72.0,
+        "avgUnitPrice75": 103.8,
+        "year": 2019,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.2,
+        "year": 2019,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 104.0,
+        "year": 2019,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.0,
+        "year": 2019,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 103.9,
+        "year": 2019,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.0,
+        "year": 2019,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.2,
+        "year": 2019,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 103.6,
+        "year": 2019,
+        "month": 8,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.6,
+        "year": 2019,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.5,
+        "year": 2019,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 103.7,
+        "year": 2019,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 103.8,
+        "year": 2019,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.6,
+        "year": 2019,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 103.7,
+        "year": 2019,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 103.8,
+        "year": 2019,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 103.7,
+        "year": 2019,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.4,
+        "year": 2019,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.3,
+        "year": 2019,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.4,
+        "year": 2019,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.3,
+        "year": 2019,
+        "month": 10,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.3,
+        "year": 2019,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.4,
+        "year": 2019,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.1,
+        "year": 2019,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.3,
+        "year": 2019,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 104.0,
+        "year": 2019,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.0,
+        "avgUnitPrice75": 103.7,
+        "year": 2019,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 103.8,
+        "year": 2019,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 71.7,
+        "avgUnitPrice75": 102.6,
+        "year": 2020,
+        "month": 1,
+        "week": 1
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.0,
+        "avgUnitPrice75": 103.5,
+        "year": 2020,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 103.8,
+        "year": 2020,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.0,
+        "year": 2020,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.2,
+        "year": 2020,
+        "month": 1,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.4,
+        "year": 2020,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.5,
+        "year": 2020,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.5,
+        "year": 2020,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.4,
+        "year": 2020,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 72.6,
+        "avgUnitPrice75": 104.3,
+        "year": 2020,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 104.7,
+        "year": 2020,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 72.6,
+        "avgUnitPrice75": 104.5,
+        "year": 2020,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.6,
+        "year": 2020,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 45.9,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.5,
+        "year": 2020,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 45.9,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.5,
+        "year": 2020,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 45.8,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.5,
+        "year": 2020,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 46.0,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.5,
+        "year": 2020,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 46.0,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.4,
+        "year": 2020,
+        "month": 4,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 104.2,
+        "year": 2020,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 46.2,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.3,
+        "year": 2020,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 104.2,
+        "year": 2020,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 46.0,
+        "avgUnitPrice50": 72.5,
+        "avgUnitPrice75": 104.8,
+        "year": 2020,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 72.6,
+        "avgUnitPrice75": 105.2,
+        "year": 2020,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 105.7,
+        "year": 2020,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 106.1,
+        "year": 2020,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.3,
+        "year": 2020,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 106.4,
+        "year": 2020,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.6,
+        "year": 2020,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.8,
+        "year": 2020,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 106.7,
+        "year": 2020,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 107.2,
+        "year": 2020,
+        "month": 7,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 73.9,
+        "avgUnitPrice75": 107.7,
+        "year": 2020,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 107.3,
+        "year": 2020,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 107.4,
+        "year": 2020,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 73.9,
+        "avgUnitPrice75": 107.9,
+        "year": 2020,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 74.1,
+        "avgUnitPrice75": 108.3,
+        "year": 2020,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 74.2,
+        "avgUnitPrice75": 108.3,
+        "year": 2020,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 74.1,
+        "avgUnitPrice75": 107.9,
+        "year": 2020,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 74.1,
+        "avgUnitPrice75": 108.1,
+        "year": 2020,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 74.2,
+        "avgUnitPrice75": 108.1,
+        "year": 2020,
+        "month": 10,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 74.4,
+        "avgUnitPrice75": 108.1,
+        "year": 2020,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 74.3,
+        "avgUnitPrice75": 108.2,
+        "year": 2020,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 74.2,
+        "avgUnitPrice75": 108.0,
+        "year": 2020,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 74.1,
+        "avgUnitPrice75": 107.9,
+        "year": 2020,
+        "month": 10,
+        "week": 44
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 74.5,
+        "avgUnitPrice75": 108.4,
+        "year": 2020,
+        "month": 11,
+        "week": 45
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 74.7,
+        "avgUnitPrice75": 108.7,
+        "year": 2020,
+        "month": 11,
+        "week": 46
+      },
+      {
+        "avgUnitPrice25": 45.7,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 107.5,
+        "year": 2020,
+        "month": 11,
+        "week": 47
+      },
+      {
+        "avgUnitPrice25": 45.8,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 107.9,
+        "year": 2020,
+        "month": 11,
+        "week": 48
+      },
+      {
+        "avgUnitPrice25": 45.4,
+        "avgUnitPrice50": 73.1,
+        "avgUnitPrice75": 107.6,
+        "year": 2020,
+        "month": 12,
+        "week": 49
+      },
+      {
+        "avgUnitPrice25": 45.3,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 107.0,
+        "year": 2020,
+        "month": 12,
+        "week": 50
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 107.3,
+        "year": 2020,
+        "month": 12,
+        "week": 51
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 107.3,
+        "year": 2020,
+        "month": 12,
+        "week": 52
+      },
+      {
+        "avgUnitPrice25": 45.4,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 107.1,
+        "year": 2020,
+        "month": 12,
+        "week": 53
+      },
+      {
+        "avgUnitPrice25": 44.8,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 105.3,
+        "year": 2021,
+        "month": 1,
+        "week": 2
+      },
+      {
+        "avgUnitPrice25": 44.1,
+        "avgUnitPrice50": 71.6,
+        "avgUnitPrice75": 104.8,
+        "year": 2021,
+        "month": 1,
+        "week": 3
+      },
+      {
+        "avgUnitPrice25": 45.0,
+        "avgUnitPrice50": 71.9,
+        "avgUnitPrice75": 105.0,
+        "year": 2021,
+        "month": 1,
+        "week": 4
+      },
+      {
+        "avgUnitPrice25": 44.8,
+        "avgUnitPrice50": 72.0,
+        "avgUnitPrice75": 105.3,
+        "year": 2021,
+        "month": 1,
+        "week": 5
+      },
+      {
+        "avgUnitPrice25": 44.8,
+        "avgUnitPrice50": 71.9,
+        "avgUnitPrice75": 105.4,
+        "year": 2021,
+        "month": 2,
+        "week": 6
+      },
+      {
+        "avgUnitPrice25": 45.1,
+        "avgUnitPrice50": 72.2,
+        "avgUnitPrice75": 105.7,
+        "year": 2021,
+        "month": 2,
+        "week": 7
+      },
+      {
+        "avgUnitPrice25": 45.1,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 106.0,
+        "year": 2021,
+        "month": 2,
+        "week": 8
+      },
+      {
+        "avgUnitPrice25": 45.2,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 106.1,
+        "year": 2021,
+        "month": 2,
+        "week": 9
+      },
+      {
+        "avgUnitPrice25": 45.0,
+        "avgUnitPrice50": 72.1,
+        "avgUnitPrice75": 105.9,
+        "year": 2021,
+        "month": 3,
+        "week": 10
+      },
+      {
+        "avgUnitPrice25": 45.2,
+        "avgUnitPrice50": 72.3,
+        "avgUnitPrice75": 105.9,
+        "year": 2021,
+        "month": 3,
+        "week": 11
+      },
+      {
+        "avgUnitPrice25": 45.5,
+        "avgUnitPrice50": 72.6,
+        "avgUnitPrice75": 106.3,
+        "year": 2021,
+        "month": 3,
+        "week": 12
+      },
+      {
+        "avgUnitPrice25": 45.7,
+        "avgUnitPrice50": 72.7,
+        "avgUnitPrice75": 106.4,
+        "year": 2021,
+        "month": 3,
+        "week": 13
+      },
+      {
+        "avgUnitPrice25": 45.6,
+        "avgUnitPrice50": 72.4,
+        "avgUnitPrice75": 105.7,
+        "year": 2021,
+        "month": 4,
+        "week": 14
+      },
+      {
+        "avgUnitPrice25": 45.8,
+        "avgUnitPrice50": 72.8,
+        "avgUnitPrice75": 106.2,
+        "year": 2021,
+        "month": 4,
+        "week": 15
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 73.0,
+        "avgUnitPrice75": 106.2,
+        "year": 2021,
+        "month": 4,
+        "week": 16
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 106.7,
+        "year": 2021,
+        "month": 4,
+        "week": 17
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 106.8,
+        "year": 2021,
+        "month": 4,
+        "week": 18
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.8,
+        "year": 2021,
+        "month": 5,
+        "week": 19
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 73.2,
+        "avgUnitPrice75": 106.4,
+        "year": 2021,
+        "month": 5,
+        "week": 20
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 106.4,
+        "year": 2021,
+        "month": 5,
+        "week": 21
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 107.1,
+        "year": 2021,
+        "month": 5,
+        "week": 22
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 107.2,
+        "year": 2021,
+        "month": 6,
+        "week": 23
+      },
+      {
+        "avgUnitPrice25": 46.6,
+        "avgUnitPrice50": 73.6,
+        "avgUnitPrice75": 106.6,
+        "year": 2021,
+        "month": 6,
+        "week": 24
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 73.3,
+        "avgUnitPrice75": 106.1,
+        "year": 2021,
+        "month": 6,
+        "week": 25
+      },
+      {
+        "avgUnitPrice25": 46.4,
+        "avgUnitPrice50": 73.5,
+        "avgUnitPrice75": 106.7,
+        "year": 2021,
+        "month": 6,
+        "week": 26
+      },
+      {
+        "avgUnitPrice25": 46.3,
+        "avgUnitPrice50": 73.4,
+        "avgUnitPrice75": 106.4,
+        "year": 2021,
+        "month": 7,
+        "week": 27
+      },
+      {
+        "avgUnitPrice25": 46.7,
+        "avgUnitPrice50": 74.0,
+        "avgUnitPrice75": 107.2,
+        "year": 2021,
+        "month": 7,
+        "week": 28
+      },
+      {
+        "avgUnitPrice25": 46.1,
+        "avgUnitPrice50": 73.7,
+        "avgUnitPrice75": 107.8,
+        "year": 2021,
+        "month": 7,
+        "week": 29
+      },
+      {
+        "avgUnitPrice25": 46.5,
+        "avgUnitPrice50": 74.0,
+        "avgUnitPrice75": 107.6,
+        "year": 2021,
+        "month": 7,
+        "week": 30
+      },
+      {
+        "avgUnitPrice25": 46.8,
+        "avgUnitPrice50": 74.5,
+        "avgUnitPrice75": 108.2,
+        "year": 2021,
+        "month": 7,
+        "week": 31
+      },
+      {
+        "avgUnitPrice25": 46.9,
+        "avgUnitPrice50": 74.7,
+        "avgUnitPrice75": 108.6,
+        "year": 2021,
+        "month": 8,
+        "week": 32
+      },
+      {
+        "avgUnitPrice25": 47.1,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 109.0,
+        "year": 2021,
+        "month": 8,
+        "week": 33
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 109.3,
+        "year": 2021,
+        "month": 8,
+        "week": 34
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 109.3,
+        "year": 2021,
+        "month": 8,
+        "week": 35
+      },
+      {
+        "avgUnitPrice25": 47.3,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 109.8,
+        "year": 2021,
+        "month": 9,
+        "week": 36
+      },
+      {
+        "avgUnitPrice25": 47.4,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 109.8,
+        "year": 2021,
+        "month": 9,
+        "week": 37
+      },
+      {
+        "avgUnitPrice25": 47.6,
+        "avgUnitPrice50": 75.3,
+        "avgUnitPrice75": 109.7,
+        "year": 2021,
+        "month": 9,
+        "week": 38
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 109.9,
+        "year": 2021,
+        "month": 9,
+        "week": 39
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 75.1,
+        "avgUnitPrice75": 109.9,
+        "year": 2021,
+        "month": 9,
+        "week": 40
+      },
+      {
+        "avgUnitPrice25": 47.5,
+        "avgUnitPrice50": 75.0,
+        "avgUnitPrice75": 109.7,
+        "year": 2021,
+        "month": 10,
+        "week": 41
+      },
+      {
+        "avgUnitPrice25": 47.8,
+        "avgUnitPrice50": 75.4,
+        "avgUnitPrice75": 110.0,
+        "year": 2021,
+        "month": 10,
+        "week": 42
+      },
+      {
+        "avgUnitPrice25": 48.3,
+        "avgUnitPrice50": 76.2,
+        "avgUnitPrice75": 111.5,
+        "year": 2021,
+        "month": 10,
+        "week": 43
+      },
+      {
+        "avgUnitPrice25": 48.4,
+        "avgUnitPrice50": 76.3,
+        "avgUnitPrice75": 111.8,
+        "year": 2021,
+        "month": 10,
+        "week": 44
+      }
+    ]
+  }
