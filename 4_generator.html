@@ -1,146 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>generator</title>
     <style>
-        svg {
-            outline: 1px solid red;
-        }
+      svg {
+        outline: 1px solid red;
+      }
 
-        .arc path {
-            fill: orange;
-        }
+      .arc path {
+        fill: orange;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="container">
-    </div>
+  <body>
+    <div class="container"></div>
 
     <svg width="700" height="130">
-        <g class="arc" transform="translate(300, 65)"></g>
+      <g class="arc" transform="translate(300, 65)"></g>
     </svg>
 
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
-        // data 
-        const data = [{
-                x: 100,
-                y: 30,
-                value: 'A'
-            },
-            {
-                x: 180,
-                y: 50,
-                value: 'B'
-            },
-            {
-                x: 250,
-                y: 30,
-                value: 'A'
-            },
-        ];
+      // data
+      const data = [
+        {
+          x: 100,
+          y: 30,
+          value: "A",
+        },
+        {
+          x: 180,
+          y: 50,
+          value: "B",
+        },
+        {
+          x: 250,
+          y: 30,
+          value: "A",
+        },
+      ];
 
-        // svg
-        const svg = d3.select('.container').append('svg');
-        svg.attr('width', 400)
-            .attr('height', 300);
+      // svg
+      const svg = d3.select(".container").append("svg");
+      svg.attr("width", 400).attr("height", 300);
 
+      // symbol Generator
+      let symbol = d3
+        .symbol() //使用符號產生器
+        .size(200) //定義符號大小
+        .type(d3.symbolStar); //決定哪種符號
 
-        // symbol Generator
-        let symbol = d3.symbol() //使用符號產生器
-            .size(100) //定義符號大小
-            .type(d3.symbolStar) //決定哪種符號
+      svg
+        .append("g") //g將星星作為一個組合
+        .selectAll("path")
+        .data(data)
+        .enter() // 綁定資料
+        .append("path") //為每個元素建立新的path元素
+        .attr("d", symbol) //上方定義的符號產生器把d屬性填入建立的path
+        .attr("fill", "blue")
+        .attr("transform", (d) => `translate(${d.x},${d.y})`); //資料中的x
 
-        svg.append('g') //g將星星作為一個組合
-            .selectAll('path')
-            .data(data)
-            .enter() // 綁定資料
-            .append('path') //為每個元素建立新的path元素
-            .attr('d', symbol) //上方定義的符號產生器把d屬性填入建立的path
-            .attr('fill', 'blue')
-            .attr('transform', d => `translate(${d.x},${d.y})`); //資料中的x
+      // ===================================
+      // Line Generator
+      let data2 = [
+        [1, 1],
+        [2, 2],
+        [3, 2],
+        [4, 2],
+        [5, 2],
+        [6, 2],
+      ];
 
+      let xScale = d3.scaleLinear().domain([0, 10]).range([0, 500]),
+        yScale = d3.scaleLinear().domain([0, 10]).range([200, 0]),
+        dataSet = data2.map((d) => [xScale(d[0]), yScale(d[1])]);
 
-        // ===================================
-        // Line Generator
-        let data2 = [
-            [1, 1],
-            [2, 2],
-            [3, 2],
-            [4, 2],
-            [5, 2],
-            [6, 2]
-        ]
+      // 畫點點
+      svg
+        .append("g")
+        .selectAll("circle")
+        .data(dataSet)
+        .enter()
+        .append("circle")
+        .attr("r", 3)
+        .attr("cx", (d) => d[0])
+        .attr("cy", (d) => d[1]);
 
-        let xScale = d3.scaleLinear().domain([0, 10]).range([0, 500]),
-            yScale = d3.scaleLinear().domain([0, 10]).range([200, 0]),
-            dataSet = data2.map(d => [xScale(d[0]), yScale(d[1])])
+      // 畫線
+      //   let lineGenerator = d3.line(); //generator function
+      //   svg
+      //     .append("g")
+      //     .append("path")
+      //     .attr("d", lineGenerator(dataSet))
+      //     .attr("fill", "none")
+      //     .attr("stroke", "red");
 
-        // 畫點點
-        svg.append('g').selectAll('circle')
-            .data(dataSet).enter().append('circle')
-            .attr('r', 3)
-            .attr('cx', d => d[0])
-            .attr('cy', d => d[1])
+      //defined
+      let lineGenerator = d3
+        .line()
+        .defined((d, i) => (i == 2 ? undefined : true)); //index2不畫線
+      svg
+        .append("g")
+        .append("path")
+        .attr("d", lineGenerator(dataSet))
+        .attr("fill", "none")
+        .attr("stroke", "red");
 
-        // 畫線
-        let lineGenerator = d3.line() //generator function
-        svg.append('g')
-            .append('path')
-            .attr('d', lineGenerator(dataSet))
-            .attr('fill', 'none').attr('stroke', 'red');
+      // ===================================
+      // 建立arc Generator
+      var arcGenerator = d3
+        .arc()
+        .innerRadius(10)
+        .outerRadius(60)
+        .padAngle(0.02)
+        .padRadius(100)
+        .cornerRadius(4);
 
-        // defined
-        // let lineGenerator = d3.line().defined((d, i) => i == 2 ? undefined : true); //index2不畫線
-        // svg.append('g')
-        //     .append('path')
-        //     .attr('d', lineGenerator(dataSet))
-        //     .attr('fill', 'none').attr('stroke', 'red');
+      // 定義資料集
+      var arcData = [
+        {
+          startAngle: 0,
+          endAngle: 0.2,
+        },
+        {
+          startAngle: 0.2,
+          endAngle: 0.6,
+        },
+        {
+          startAngle: 0.6,
+          endAngle: 1.4,
+        },
+        {
+          startAngle: 1.4,
+          endAngle: 3,
+        },
+        {
+          startAngle: 3,
+          endAngle: 2 * Math.PI,
+        },
+      ];
 
-        // ===================================
-        // 建立arc Generator
-        var arcGenerator = d3.arc()
-            .innerRadius(10)
-            .outerRadius(60)
-            .padAngle(.02)
-            .padRadius(100)
-            .cornerRadius(4);
-
-        // 定義資料集
-        var arcData = [{
-                startAngle: 0,
-                endAngle: 0.2
-            },
-            {
-                startAngle: 0.2,
-                endAngle: 0.6
-            },
-            {
-                startAngle: 0.6,
-                endAngle: 1.4
-            },
-            {
-                startAngle: 1.4,
-                endAngle: 3
-            },
-            {
-                startAngle: 3,
-                endAngle: 2 * Math.PI
-            }
-        ];
-
-        // 產生路徑，呼叫generator路徑
-        d3.select('.arc')
-            .selectAll('path')
-            .data(arcData)
-            .join('path')
-            .attr('d', arcGenerator);
+      // 產生路徑，呼叫generator路徑
+      d3.select(".arc")
+        .selectAll("path")
+        .data(arcData)
+        .join("path")
+        .attr("d", arcGenerator);
     </script>
-</body>
-
+  </body>
 </html>

@@ -38,18 +38,18 @@
         },
       ];
       //   contain 1，有一個circle
-      const svg = d3.select(".container").select("svg");
-      svg.insert("text");
+      // const svg = d3.select(".container").select("svg");
+      // svg.insert("text");
 
-      // 加入資料
-      let dots = svg
-        .selectAll("circle")
-        .data(data)
-        .attr("r", 10)
-        .attr("fill", "red")
-        .attr("cx", (d) => d.x)
-        .attr("cy", (d) => d.y);
-      console.log(dots);
+      // // 加入資料
+      // let dots = svg
+      //   .selectAll("circle")
+      //   .data(data)
+      //   .attr("r", 10)
+      //   .attr("fill", "red")
+      //   .attr("cx", (d) => d.x)
+      //   .attr("cy", (d) => d.y);
+      // console.log(dots);
 
       let svg2 = d3
         .select(".container2")
@@ -57,13 +57,15 @@
         .attr("width", "300")
         .attr("height", "200");
 
-      let dots2 = svg2.selectAll("circle").data(data);
-      // .enter()
-      // .append("circle")
-      // .attr("r", 10)
-      // .attr("fill", "red")
-      // .attr("cx", (d) => d.x)
-      // .attr("cy", (d) => d.y);
+      let dots2 = svg2
+        .selectAll("circle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("r", 10)
+        .attr("fill", "red")
+        .attr("cx", (d) => d.x)
+        .attr("cy", (d) => d.y);
       console.log(dots2);
     </script>
   </body>
