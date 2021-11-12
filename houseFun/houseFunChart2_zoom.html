@@ -109,7 +109,7 @@
                     </select>
                 </li>
                 <!-- selection 銷售行情 -->
-                <li id="ChartOption2" style="display: none;">
+                <li id="ChartOption2" style="display: block;">
                     <select name="ShowChartB" onChange="getData(value, '#chartdiv2')">
                         <option id="ShowChartMonth" value="m">月趨勢</option>
                         <option id="ShowChartWeek" value="w">週趨勢</option>
@@ -118,7 +118,7 @@
             </ul>
 
             <!-- 實價登錄 -->
-            <div id="ShowChartDiv1" class="dealPriceJPlot_block noteRelay s5" style="display: block;">
+            <div id="ShowChartDiv1" class="dealPriceJPlot_block noteRelay s5" style="display: none;">
                 <!-- <iframe id="IFrameChart1" width="620" height="292" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
                 <div id="chartdiv1" style="width: 620px; height: 285px; position: relative;" class=""></div>
                 
@@ -131,7 +131,7 @@
             </div>
 
             <!-- 銷售行情 -->
-            <div id="ShowChartDiv2" class="dealPriceJPlot_block noteRelay s5" style="display: none;">
+            <div id="ShowChartDiv2" class="dealPriceJPlot_block noteRelay s5" style="display: block;">
                 <!-- <iframe id="IFrameChart2" width="620" height="312" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
                 <!-- <p class="dealPriceJPlot_block_p"></p> -->
                 <div id="chartdiv2" style="width: 620px; height: 285px; position: relative;">
@@ -291,10 +291,6 @@
         
         // 整理資料
         const xData = data.map(d=> [d.year, d.month, d.week].filter(d => d !== undefined).join('-'))
-        console.log(xData);
-         // let groups =  tabOption === 'm' || tabOption === 'w'
-        //             ? ['avgUnitPrice50']
-        //             : ['avgUnitPrice25', 'avgUnitPrice50', 'avgUnitPrice75'];
         let groups = ['avgUnitPrice25', 'avgUnitPrice50', 'avgUnitPrice75'];
         const dataGroups = groups.map(groupName => {
             return {
@@ -336,6 +332,7 @@
         svg.append('g')
             .call(xAxis)
             .attr('class', 'xAxis')
+            .attr("clip-path", "url(#clip)")
             .attr('transform', `translate(0, ${svgHeight - marginY})`)
 
         svg.append('g')
@@ -379,16 +376,25 @@
                     .domain(groups)
                     .range([ '#3580cd', '#c09b4e','#993300'])
         
+        // 設定一個覆蓋的矩形，縮放時遮掉超過的X範圍
+        const defs = svg.append("defs").append("clipPath")
+            .attr("id", "clip")
+            .append("rect")
+            .attr("x", marginX*2)
+            .attr("width", svgWidth - marginX*3)
+            .attr("height", svgHeight)
+        
         // 開始建立折線圖
         const line = svg.append('g')
                         .attr('class', 'lineChart')
+                        .attr("clip-path", "url(#clip)")
                 
         // 設定折線圖相關資料
         const lineChart = d3.line()
                 .x((d) => xScale(parseTime(d.time)))
                 .y((d) => yScale(+d.value))
 
-                line.selectAll('.line')
+            const lines =  line.selectAll('.line')
                 .data(dataGroups)
                 .join('path')
                 .attr('class', '.line')
@@ -401,6 +407,7 @@
         const dots = svg.selectAll('dotGroups') 
                     .data(dataGroups)
                     .join('g')
+                    .attr("clip-path", "url(#clip)")
                     .attr('stroke', d => color(d))
                     .attr('fill', d => color(d))
                     .selectAll('dots') // 定義各組各自的點
@@ -467,6 +474,62 @@
             tooltip.style("opacity", 0)
         }
 
+        // 縮放事件
+        svg.call(zoom);
+
+        function zoom(svg){
+          // 確定目前寬度最大最小範圍
+          const extent = [
+            [marginX, marginY], [svgWidth - marginX, svgHeight - marginY]
+          ];
+
+          // 傳進來的svg綁上zoom事件
+          const zooming = d3.zoom()
+                .scaleExtent([1, 20])
+                .translateExtent(extent)
+                .extent(extent)
+                .on("zoom", zoomed);
+           
+          svg.call(zooming);
+
+          // 當縮放事件發生時，對應的事件
+          function zoomed(event) {
+              console.log(event.transform.y);
+            if(event.transform.y >= 0){
+                svg.select(".xAxis")
+                   .call(xAxis.ticks(20));
+            } else {
+                
+                xScale.range(
+                    [marginX, svgWidth - marginX].map(d => event.transform.applyX(d))
+                );
+
+                // 重新繪製折線圖
+                lines.attr("d", d => lineChart(d.values))
+
+                // 重新繪製點點
+                dots.attr('cx', d => xScale(parseTime(d.time)))
+                    .attr('cy', d => yScale(+d.value))
+
+                // 重新繪製X軸、重新計算label
+                svg.select(".xAxis")
+                    .call(xAxis.ticks(50));
+
+                svg.select(".xAxisTicks")
+                .call(xAxisTicks.scale(event.transform.rescaleX(xScale)).ticks(50))
+    
+                // 調整標籤角度
+                d3.selectAll('.xAxis')
+                    .selectAll('.tick text')
+                    .attr('dx', `${dx}`)
+                    .style('transform', `rotate(${rotateDeg+10}deg)`)
+
+                }
+
+            }   
+
+        }
+
         // 加上類別標示
         const tagsWrap =  svg.append('g')
                     .selectAll('g')
@@ -498,7 +561,7 @@
 
     };
 
-    getData('2Y', '#chartdiv1');
+    getData('m', '#chartdiv2');
 
     </script>
 </body>

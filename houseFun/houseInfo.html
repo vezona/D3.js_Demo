@@ -70,7 +70,7 @@
           <div id="li_75" class="m500_in clearfix">
             <div class="m500_in_white">
               <p class="avg"><span class="cate">較高</span><span class="gray">單價平均</span><br>
-                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=89-108"><span class="red f22 avgHigh">00.5</span></a> 萬/坪</p>
+                <a href="#"><span class="red f22 avgHigh">00.5</span></a> 萬/坪</p>
               <p class="compareM">跟上月比較：</p>
               <p class="compareY" style="display:none">跟去年同期比較：</p>
             </div>
@@ -78,7 +78,7 @@
           <div id="li_25" class="m500_in clearfix">
             <div class="m500_in_white">
               <p class="avg"><span class="cate">較低</span><span class="gray">單價平均</span><br>
-                <a href="//buy.housefun.com.tw/%e8%b2%b7%e5%b1%8b/%e5%8f%b0%e5%8c%97%e5%b8%82?hd_Purpose=K&amp;hd_unitprice=38-47"><span class="red f22 avgLow">00.4</span></a> 萬/坪</p>
+                <a href="#"><span class="red f22 avgLow">00.4</span></a> 萬/坪</p>
               <p class="compareM">跟上月比較：</p>
               <p class="compareY" style="display:none">跟去年同期比較：</p>
             </div>
@@ -97,6 +97,14 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
+    const formatWeek = d3.timeFormat("%W"),
+        date = new Date(2021, 0, 17); 
+        console.log(date);
+
+        console.log('week', formatWeek(date));
+
+
+
     var ltm_data = {
         "pagedata":{
             "areas":[
@@ -240,6 +248,10 @@
           // 每坪價格      
           $('.avgHigh').text(avgHigh[0].avgUnitPrice)
           $('.avgLow').text(avgLow[0].avgUnitPrice)
+
+          // 連結
+          $('.avgHigh').parent('a').attr('href', avgHigh[0].url)
+          $('.avgHigh').parent('a').attr('href', avgLow[0].url)
 
           $('#li_75').find('.cate').text('大樓')
 
