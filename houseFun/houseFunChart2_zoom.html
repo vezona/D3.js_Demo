@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>houseFunChart2_zoom</title>
     <style>
     /* 蓋掉瀏覽器預設 */
     .dealTab{
@@ -109,7 +109,7 @@
                     </select>
                 </li>
                 <!-- selection 銷售行情 -->
-                <li id="ChartOption2" style="display: block;">
+                <li id="ChartOption2" style="display: none;">
                     <select name="ShowChartB" onChange="getData(value, '#chartdiv2')">
                         <option id="ShowChartMonth" value="m">月趨勢</option>
                         <option id="ShowChartWeek" value="w">週趨勢</option>
@@ -118,8 +118,7 @@
             </ul>
 
             <!-- 實價登錄 -->
-            <div id="ShowChartDiv1" class="dealPriceJPlot_block noteRelay s5" style="display: none;">
-                <!-- <iframe id="IFrameChart1" width="620" height="292" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
+            <div id="ShowChartDiv1" class="dealPriceJPlot_block noteRelay s5" style="display: block;">
                 <div id="chartdiv1" style="width: 620px; height: 285px; position: relative;" class=""></div>
                 
                 <!-- Footer -->
@@ -131,11 +130,9 @@
             </div>
 
             <!-- 銷售行情 -->
-            <div id="ShowChartDiv2" class="dealPriceJPlot_block noteRelay s5" style="display: block;">
-                <!-- <iframe id="IFrameChart2" width="620" height="312" frameborder="0" scrolling="no" style="display: none;"></iframe> -->
-                <!-- <p class="dealPriceJPlot_block_p"></p> -->
+            <div id="ShowChartDiv2" class="dealPriceJPlot_block noteRelay s5" style="display: none;">
+
                 <div id="chartdiv2" style="width: 620px; height: 285px; position: relative;">
-                    <!-- <div style="margin-top:140px;">正在為您載入圖表 請稍後...</div> -->
                 </div>
                 
                 <!-- Footer -->
@@ -239,6 +236,7 @@
         // console.log(data);
         // 刪除原本的svg.charts
         d3.select(`${DOM} svg`).remove();
+        d3.select(`${DOM} .bubble_content`).remove();
 
         // console.log(data)
         const svgWidth =  parseInt(d3.select(DOM).style('width')),
@@ -332,10 +330,12 @@
         svg.append('g')
             .call(xAxis)
             .attr('class', 'xAxis')
-            .attr("clip-path", "url(#clip)")
+            .attr("clip-path", `url(#${DOM}clip)`)
             .attr('transform', `translate(0, ${svgHeight - marginY})`)
 
-        svg.append('g')
+        svg.append("g")
+           .attr("clip-path",`url(#${DOM}clip)`)
+           .append('g')
             .call(xAxisTicks)
             .attr('class', 'xAxisTicks')
             .attr('transform', `translate(0, ${svgHeight - marginY})`)
@@ -377,8 +377,9 @@
                     .range([ '#3580cd', '#c09b4e','#993300'])
         
         // 設定一個覆蓋的矩形，縮放時遮掉超過的X範圍
-        const defs = svg.append("defs").append("clipPath")
-            .attr("id", "clip")
+        const defs = svg.append("defs")
+            .append("clipPath")
+            .attr("id", `${DOM}clip`)
             .append("rect")
             .attr("x", marginX*2)
             .attr("width", svgWidth - marginX*3)
@@ -387,7 +388,8 @@
         // 開始建立折線圖
         const line = svg.append('g')
                         .attr('class', 'lineChart')
-                        .attr("clip-path", "url(#clip)")
+                        .attr("clip-path", `url(#${DOM}clip)`)
+
                 
         // 設定折線圖相關資料
         const lineChart = d3.line()
@@ -407,7 +409,7 @@
         const dots = svg.selectAll('dotGroups') 
                     .data(dataGroups)
                     .join('g')
-                    .attr("clip-path", "url(#clip)")
+                    .attr("clip-path", `url(#${DOM}clip)`)
                     .attr('stroke', d => color(d))
                     .attr('fill', d => color(d))
                     .selectAll('dots') // 定義各組各自的點
@@ -424,9 +426,11 @@
         // 建立tooltips
         const tooltip = d3.select(DOM)
                     .append('div')
+                    .style('display', 'none')
                     .attr('class', 'bubble_content')
                     .style('position', 'absolute')
                     .style("opacity", 0)
+                    
                     
         // 滑鼠事件
         function dotsMouseover(d){
@@ -447,8 +451,9 @@
             }
             })
 
-            if(tabOption === 'w'){
+            if(tabOption === 'w' || tabOption === 'm'){
                 tooltip.style("opacity", 1)
+                    .style('display', 'block')
                     .style('left', (pt[0]+20) + 'px')
                     .style('top', (pt[1]) + 'px')
                     .html(`<h3>${d.target.__data__.time.split('-')[0]}年${d.target.__data__.time.split('-')[1]}月${d.target.__data__.time.split('-')[2]}週</h3>
@@ -458,6 +463,7 @@
                     `)
             } else {
                 tooltip.style("opacity", 1)
+                    .style('display', 'block')
                     .style('left', (pt[0]+20) + 'px')
                     .style('top', (pt[1]) + 'px')
                     .html(`<h3>${d.target.__data__.time.split('-')[0]}年${d.target.__data__.time.split('-')[1]}月</h3>
@@ -465,23 +471,24 @@
                     <p><span class="color_m">住宅單價平均：</span> ${groupValues[1].value} 萬/坪</p>
                     <p><span class="color_l">最低單價平均：</span> ${groupValues[0].value} 萬/坪</p>
                     `)
-
             }
         }
 
         function dotsMouseleave(d){
             d3.select(this).attr('r', '3')
-            tooltip.style("opacity", 0)
+            tooltip.style("opacity", 0).style('display', 'none')
         }
 
         // 縮放事件
-        svg.call(zoom);
+        if(tabOption === 'm'){
+            d3.select('#chartdiv2 svg').call(zoom);
+        }
 
         function zoom(svg){
           // 確定目前寬度最大最小範圍
           const extent = [
-            [marginX, marginY], [svgWidth - marginX, svgHeight - marginY]
-          ];
+            [marginX*2, marginY], [svgWidth - marginX, svgHeight - marginY]
+        ];
 
           // 傳進來的svg綁上zoom事件
           const zooming = d3.zoom()
@@ -494,12 +501,6 @@
 
           // 當縮放事件發生時，對應的事件
           function zoomed(event) {
-              console.log(event.transform.y);
-            if(event.transform.y >= 0){
-                svg.select(".xAxis")
-                   .call(xAxis.ticks(20));
-            } else {
-                
                 xScale.range(
                     [marginX, svgWidth - marginX].map(d => event.transform.applyX(d))
                 );
@@ -512,20 +513,25 @@
                     .attr('cy', d => yScale(+d.value))
 
                 // 重新繪製X軸、重新計算label
-                svg.select(".xAxis")
+                if(event.transform.y >= 0){
+                    svg.select(".xAxis")
+                   .call(xAxis.ticks(20));
+
+                    svg.select(".xAxisTicks")
+                    .call(xAxisTicks.ticks(20))
+                } else{
+                    svg.select(".xAxis")
                     .call(xAxis.ticks(50));
 
-                svg.select(".xAxisTicks")
-                .call(xAxisTicks.scale(event.transform.rescaleX(xScale)).ticks(50))
-    
+                    svg.select(".xAxisTicks")
+                    .call(xAxisTicks.ticks(50))
+                }
+
                 // 調整標籤角度
                 d3.selectAll('.xAxis')
                     .selectAll('.tick text')
                     .attr('dx', `${dx}`)
                     .style('transform', `rotate(${rotateDeg+10}deg)`)
-
-                }
-
             }   
 
         }
@@ -561,7 +567,7 @@
 
     };
 
-    getData('m', '#chartdiv2');
+    getData('2Y' , '#chartdiv1');
 
     </script>
 </body>

@@ -15,14 +15,17 @@
     </style>
 </head>
 <body>
+  <button type='button' onclick='drawChart("chart")'>Click</button>
     <div class="chart"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
-        const data = [31,6,11,12,5,1,156,77,31,55,123,124, 201,99,63,9,72]
+
+      function drawChart(){
+        d3.select('.chart svg').remove();
+        const data = [1,2,3,4,5,6]
         const width = 500,
               height = 300
-              margin = 30;
-
+              margin = 40;
 
         const svg = d3.select('.chart')
                 .append('svg')
@@ -32,7 +35,6 @@
         const xData = data.map((d,i)=>i);
         const yData = data.map(d => d);
         
-
         // 設定要給 X 軸用的 scale 跟 axis
         let xScale = d3.scaleLinear()
                         .domain(d3.extent(xData))
@@ -44,6 +46,8 @@
                         .tickSize(-height+margin)
 
         const xAxisGroup = svg.append("g")
+                            .attr("clip-path", "url(#chartClip)")
+                            .append('g')
                             .call(xAxis)
                             .attr("class", "x-axis")
                             // .attr("clip-path", "url(#clip)")
@@ -62,15 +66,16 @@
                             .attr("transform", `translate(${margin},0)`)  
 
         // 建立clip X軸矩形，遮擋X軸超出的線段
-        const defs = svg.append("defs").append("clipPath")
-            .attr("id", "clip")
-            .append("rect")
-            .attr("x", margin)
-            .attr("width", width - margin*2)
-            .attr("height", height)
+        const defs = svg.append("defs")
+                        .append("clipPath")
+                        .attr("id", "chartClip")
+                        .append("rect")
+                        .attr("x", margin)
+                        .attr("width", width - margin*2)
+                        .attr("height", height)
 
         const line = svg.append('g')
-                .attr("clip-path", "url(#clip)")
+                .attr("clip-path", "url(#chartClip)")
 
         const lineChart = d3.line()
                 .x((d,i) => xScale(i))
@@ -85,7 +90,7 @@
             .attr("stroke-width", 1.5)
             .attr("d", lineChart(data))
         
-            // const linePath = svg.append("path").attr("class","line").attr("d",lineChart(data));
+          // const linePath = svg.append("path").attr("class","line").attr("d",lineChart(data));
         // 加上點點
         const dots = svg.append('g')
                         .selectAll('circle')
@@ -96,7 +101,7 @@
                         .attr('cx', (d,i)=>xScale(i))
                         .attr('cy', d => yScale(d))
                         .attr('stroke', 1)
-                        .attr("clip-path", "url(#clip)")
+                        .attr("clip-path", "url(#chartClip)")
 
         // 縮放開始
         svg.call(zoom);
@@ -118,37 +123,34 @@
 
           // 當縮放事件發生時，對應的事件
           function zoomed(event) {
-              // 這個拿掉軸線就不用變，但折線不會動
-            // xScale.range(
-            //     [margin, width - margin].map(d => {
-            //         console.log(d);
-            //         console.log(event.transform);
-            //         return event.transform.applyX(d)
-            //     })
-            // );
+            xScale.range(
+                [margin, width - margin].map(d => {
+                    console.log(d);
+                    console.log(event.transform);
+                    return event.transform.applyX(d)
+                })
+            );
 
             // 重新繪製折線圖
-            line.transition().duration(500)
-                .selectAll('.line')
+            line.selectAll('.line')
                 .attr("d", lineChart(data));
 
             // 重新繪製X軸
-            // svg.select(".x-axis")
-            //     .call(xAxis);
+            svg.select(".x-axis")
+                .call(xAxis);
 
-            xAxisGroup.transition().duration(500)
-                      .call(xAxis.scale(event.transform.rescaleX(xScale)))
+            // 這個會把X軸的scale也改變，無法對應原本位置
+            // xAxisGroup.call(xAxis.scale(event.transform.rescaleX(xScale)))
                       
             // 重新繪製點點
-            svg.transition().duration(500)
-               .selectAll('.dots')
+            svg.selectAll('.dots')
                .attr('cx', (d,i)=>xScale(i))
                .attr('cy', d => yScale(d))
-            }
-
-            
+            }   
         }
 
+      }
+  
     </script>
 </body>
 </html>

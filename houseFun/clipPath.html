@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip Path</title>
+    <style>
+     .line {
+		  fill: none;
+		  stroke: steelblue;
+		  stroke-width: 2px;
+		}
+     .tick line{
+			opacity: 0.2;
+		}
+
+     rect{
+      fill: green
+    }
+    </style>
+</head>
+<body>
+  <button type='button' onclick="drawChart()" >按我出圖</button>
+  <div id="diagram"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+    function drawChart(){
+      d3.select('#diagram svg').remove()
+
+      var margin = {top: 20, right: 20, bottom: 50, left: 70};
+      var width = 500 - margin.left - margin.right;
+      var height = 200 - margin.top - margin.bottom;
+      
+      //add svg with margin !important
+      //this is svg is actually group
+      var svg = d3.select("#diagram").append("svg")
+            .attr("width",width+margin.left+margin.right)
+            .attr("height",height+margin.top+margin.bottom)
+            .append("g")  //add group to leave margin for axis
+            .attr("transform","translate("+margin.left+","+margin.top+")");
+      
+      var dataset = [[5, 20], [480, 90], [250, 50], [100, 33], [330, 95],
+                    [410, 12], [475, 44], [25, 67], [85, 21], [220, 88]];
+
+      //add x axis
+      var xScale = d3.scaleLinear()
+                      .range([0,width])
+                      .domain([0,d3.max(dataset, function(d){return d[0];})]);
+      
+      //sort x
+      dataset.sort(function(a,b){
+        if(a[0]< b[0]){
+          return -1;
+        }
+        else{
+          return 1;
+        }
+      })
+      
+      var xAxis = d3.axisBottom(xScale).tickSize(-height);/*.tickFormat("");remove tick label*/
+      var xAxisGroup = svg.append("g")
+                          .attr("clip-path","url(#clip)")
+                          .append("g").call(xAxis)
+                          .attr("transform", "translate(0,"+height+")");
+      
+        
+      //add clip path to the svg
+      svg.append("defs")
+          .append("clipPath").attr("id","clip")
+        .append("rect")
+          .attr('x', margin.left)
+          .attr('y', margin.top)
+          .attr("width",210)
+          .attr("height",200);
+
+        const circleRed = svg.append('g').append('circle')
+            .attr("clip-path","url(#clip)")
+            .attr('id','myCircle')
+            .attr('r', 60)
+            .attr('cx', 20)
+            .attr('cy', 50)
+            .attr('fill','red');
+
+        const circleBlue = svg.append('g').append('circle')
+            .attr('id','myCircle')
+            .attr('r', 30)
+            .attr('cx', 60)
+            .attr('cy', 100)
+            .attr('fill','Blue');
+
+      }
+    
+              
+    </script>
+</body>
+</html>
